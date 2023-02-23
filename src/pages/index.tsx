@@ -1,11 +1,14 @@
 import { type NextPage } from "next";
 
 import Button from "~/components/button";
+import Card from "~/components/card";
 
 const Home: NextPage = () => {
   return (
     <>
-     <Button/>
+      <Card className="bg-black text-white" hasButton>
+        dada
+      </Card>
     </>
   );
 };
