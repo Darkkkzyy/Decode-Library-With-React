@@ -6,7 +6,7 @@ import Card from "~/components/card";
 const Home: NextPage = () => {
   return (
     <>
-      <Card className="bg-black text-white" hasButton>
+      <Card className="bg-black text-white">
         dada
       </Card>
     </>

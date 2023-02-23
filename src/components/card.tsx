@@ -1,6 +1,13 @@
+import { ReactNode } from "react";
 import Button from "./button";
 
-const Card = ({ hasButton=false, children, className }) => {
+interface CardProps {
+  hasButton?: boolean;
+  children: ReactNode;
+  className: string;
+}
+
+const Card = ({ hasButton = false, children, className }: CardProps) => {
   return (
     <div className={`flex w-40 flex-col p-4 ${className}`}>
       {children}
