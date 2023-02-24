@@ -1,8 +1,10 @@
-const Button = ( {children}) => {
+const Button = ({children}) => {
   return (
-    <button className="h-16 w-24 rounded-xl bg-slate-600 hover:bg-slate-800">
-      {children}
-    </button>
+    <div className="flex justify-center items-center">
+        <button className="rounded-full bg-[#FF4E16] h-[43px] w-[360px] py-2 px-4 font-bold text-white hover:bg-orange-700">
+        {children}
+      </button>
+    </div>
   );
 };
 
