@@ -10,28 +10,36 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <div className="container  flex h-[100vh] flex-row items-center  justify-center gap-[121px]">
-        <div className="login1Left flex h-[85%] w-[35%] flex-col items-start justify-center">
-          <h1 className="self-start text-5xl text-white uppercase">
-            Comece a Viajar pelos livros
-          </h1>
-          <Image src={frontImage} alt="teste" />
-          <p className="text-xl text-white">
+      <div className="container mr-0 flex h-[100vh] w-[100%] flex-row items-center  justify-center gap-[175px]">
+        <div className="login1Left flex h-[85%] w-[70%]  flex-col items-center justify-center lg:hidden ">
+          <div className=" flex justify-center w-[75%] mb-10 ">
+            <h1 className="self-start text-5xl uppercase text-white ">
+              Comece a Viajar pelos livros
+            </h1>
+          </div>
+
+          <Image className="w-[75%]" src={frontImage} alt="teste" />
+          <div className="flex justify-center w-[75%] flex-col ">
+             <p className="text-xl text-white mb-3 mt-5">
             &quot;Há livros escritos para evitar espaços vazios na estante&quot;
           </p>
           <h6 className="text-sm text-white">Carlos Drummond de Andrade</h6>
+          </div>
+         
         </div>
 
-        <div className="login2Right flex h-[85%] w-[35%] flex-col items-center justify-center">
+        <div className="login2Right flex h-[85%] w-[30%] flex-col items-center justify-center">
           <h2 className="self-start text-4xl text-white">Login</h2>
           <Input />
           <Input />
           <CheckButton />
-          <Button>
-            <Link href="teste">Login</Link>
+          <Button width>
+            <Link href="login">Login</Link>
           </Button>
           <hr className="m-5 w-[80%]" />
-          <Button tranparent>Não tem Conta? Registe-se aqui</Button>
+          <Button width tranparent>
+            Não tem Conta? Registe-se aqui
+          </Button>
         </div>
       </div>
     </>
