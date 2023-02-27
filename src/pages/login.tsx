@@ -11,9 +11,9 @@ const Login = () => {
     <>
       <Navbar />
       <div className="container mr-0 flex h-[100vh] w-[100%] flex-row items-center  justify-center gap-[175px]">
-        <div className="login1Left flex h-[85%] w-[70%]  flex-col items-center justify-center lg:hidden ">
+        <div className="login1Left hidden lg:flex h-[85%] w-[70%]  flex-col items-center justify-center ">
           <div className=" flex justify-center w-[75%] mb-10 ">
-            <h1 className="self-start text-5xl uppercase text-white ">
+            <h1 className="self-start text-5xl uppercase  text-white ">
               Comece a Viajar pelos livros
             </h1>
           </div>
@@ -25,7 +25,6 @@ const Login = () => {
           </p>
           <h6 className="text-sm text-white">Carlos Drummond de Andrade</h6>
           </div>
-         
         </div>
 
         <div className="login2Right flex h-[85%] w-[30%] flex-col items-center justify-center">
