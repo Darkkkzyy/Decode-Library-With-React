@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  width?:string;
+  width?:boolean;
   tranparent?: boolean;
 }
 
