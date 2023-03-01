@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@500&family=Rubik:wght@400;500&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -10,4 +10,20 @@
 }
 body {
   background-color: #252525 !important;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow:scroll ;
+  -ms-overflow-style: none;/*hide in edge and explorer*/
+  scrollbar-width: none;/*firefox*/
+}
+body::-webkit-scrollbar{
+  display: none;/*hide scroll ball chrome, safari and opera*/
+}
+.check{
+  width: 20px;
+  height: 20px;
+}
+.container{
+  width: 100%;
+  height: 100vh; 
 }
