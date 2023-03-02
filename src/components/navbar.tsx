@@ -10,11 +10,11 @@ const Navbar = () => {
       <div className="flex justify-between w-1/3 border ">
         <Link href="/">Home</Link>
         <Link href="livros">Book</Link>
-        <Link href="asd">Categories</Link>
+        <Link href="categories">Categories</Link>
         <Link href="aboutus">About Us</Link>
       </div>
       <div>
-      <Button  tranparent>
+      <Button visibility tranparent>
             <Link href="login">Login</Link>
           </Button>
       </div>

@@ -5,9 +5,10 @@ interface Props {
   width?:boolean;
   tranparent?: boolean;
   visibility?:boolean;
+  bgColor?:boolean;
 }
 
-const Button = ({ children, tranparent,width,visibility }: Props) => {
+const Button = ({ children, tranparent,width,visibility,bgColor }: Props) => {
   return (
     <div className="flex items-center justify-center">
       <button
@@ -19,10 +20,14 @@ const Button = ({ children, tranparent,width,visibility }: Props) => {
         }
         ${
           visibility
-            ? "sm:flex"
+            ? "sm:block"
             : "md:hidden"
         }
-        
+        ${
+          bgColor
+            ? "bg-white  hover:bg-[#E3E3E3]"
+            : ""
+        }
         `}
       >
         {children}
