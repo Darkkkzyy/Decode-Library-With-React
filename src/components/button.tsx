@@ -4,9 +4,10 @@ interface Props {
   children: ReactNode;
   width?:boolean;
   tranparent?: boolean;
+  visibility?:boolean;
 }
 
-const Button = ({ children, tranparent,width }: Props) => {
+const Button = ({ children, tranparent,width,visibility }: Props) => {
   return (
     <div className="flex items-center justify-center">
       <button
@@ -15,7 +16,14 @@ const Button = ({ children, tranparent,width }: Props) => {
           width
             ? "h-[43px] w-[360px]"
             : "h-[43px] w-[76px]"
-        }`}
+        }
+        ${
+          visibility
+            ? "sm:flex"
+            : "md:hidden"
+        }
+        
+        `}
       >
         {children}
       </button>

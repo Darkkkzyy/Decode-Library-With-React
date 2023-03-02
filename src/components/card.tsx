@@ -1,18 +1,22 @@
-import { ReactNode } from "react";
-import Button from "./button";
+import capaLivro from "../../public/2.png";
+import Image from "next/image";
 
-interface CardProps {
-  hasButton?: boolean;
-  children: ReactNode;
-  className: string;
-}
-
-const Card = ({ hasButton = false, children, className }: CardProps) => {
+const Card = () => {
   return (
-    <div className={`flex w-40 flex-col p-4 ${className}`}>
-      {children}
-      {hasButton && <Button>CardButton</Button>}
-    </div>
+    <>
+    <div className="flex flex-col flex-wrap m-10 ">
+            <div>
+              <Image
+                src={capaLivro}
+                className="h-[160px] w-[110px] md:h-[381px] md:w-[261px]"
+                alt="capaLivro"
+              ></Image>
+            </div>
+            <p className="title mb-3 text-[14px] text-white">War Peace</p>
+            <p className="author mb-3 text-[16px] text-white ">Leo Tolstoy</p>
+            <p className="price text-[20px] text-[#FF4E16]">2€/semana</p>
+          </div>
+    </>
   );
 };
 
