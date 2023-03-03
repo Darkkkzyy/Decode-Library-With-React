@@ -5,10 +5,10 @@ import Input from "antd/es/input";
 const Categories = () => {
   return (
     <>
-      <Navbar />  
-      <div className="flex flex-col h-screen">
-      <div className="flex w-[80%] flex-col items-center justify-center">
-          <h1 className="m-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:text-6xl sm:self-start">
+      <Navbar />
+      <div className="flex h-screen flex-col">
+        <div className="flex w-[80%] flex-col items-center justify-center">
+          <h1 className="m-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
             Que categoria Procura?
           </h1>
           {/* searchContainer */}
@@ -27,20 +27,33 @@ const Categories = () => {
             />
           </div>
         </div>
+        {/* dropdown */}
+        <div className="">
 
-    <div className="flex flex-row justify-center items-center gap-6 flex-wrap">
-        <Button visibility tranparent width>
-          <span className="flex justify-center items-center">Desenvolvimento Pessoal</span>
-        </Button>
-        <Button visibility tranparent width>
-          <span className="flex justify-center items-center">Desenvolvimento Pessoal</span>
-        </Button>
-        <Button visibility tranparent width>
-          <span className="flex justify-center items-center">Desenvolvimento Pessoal</span>
-        </Button>
-        <Button visibility tranparent width>
-          <span className="flex justify-center items-center">Desenvolvimento Pessoal</span>
-        </Button></div>
+        </div>
+        {/* Buttons */}
+        <div className="hidden flex-row flex-wrap items-center justify-center gap-6 md:flex">
+          <Button visibility tranparent width>
+            <span className="flex items-center justify-center">
+              Desenvolvimento Pessoal
+            </span>
+          </Button>
+          <Button visibility tranparent width>
+            <span className="flex items-center justify-center">
+              Desenvolvimento Pessoal
+            </span>
+          </Button>
+          <Button visibility tranparent width>
+            <span className="flex items-center justify-center">
+              Desenvolvimento Pessoal
+            </span>
+          </Button>
+          <Button visibility tranparent width>
+            <span className="flex items-center justify-center">
+              Desenvolvimento Pessoal
+            </span>
+          </Button>
+        </div>
       </div>
     </>
   );
