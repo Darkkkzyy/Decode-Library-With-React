@@ -2,6 +2,7 @@ import Button from "~/components/button";
 import Navbar from "~/components/navbar";
 import { FaSearch } from "react-icons/fa";
 import Input from "antd/es/input";
+import Dropdown from "~/components/Modal";
 const Categories = () => {
   return (
     <>
@@ -29,7 +30,7 @@ const Categories = () => {
         </div>
         {/* dropdown */}
         <div className="">
-
+          <Dropdown />
         </div>
         {/* Buttons */}
         <div className="hidden flex-row flex-wrap items-center justify-center gap-6 md:flex">
