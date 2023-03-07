@@ -37,7 +37,6 @@ const Livros = () => {
         {/* Button add Livro */}
         <Button width tranparent>
             <span className="flex justify-center items-center gap-5"><BsPlusSquare/>Adicionar Livro</span>
-            
           </Button>
         <div className="flex flex-row flex-wrap items-center justify-center ">
         

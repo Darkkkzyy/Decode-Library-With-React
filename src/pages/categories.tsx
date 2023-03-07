@@ -2,18 +2,18 @@ import Button from "~/components/button";
 import Navbar from "~/components/navbar";
 import { FaSearch } from "react-icons/fa";
 import Input from "antd/es/input";
-import Dropdown from "~/components/Modal";
+import DropDown from "~/components/dropdown";
 const Categories = () => {
   return (
     <>
       <Navbar />
       <div className="flex h-screen flex-col">
-        <div className="flex w-[80%] flex-col items-center justify-center">
+        <div className="flex w-[100%] flex-col items-center justify-center">
           <h1 className="m-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
             Que categoria Procura?
           </h1>
           {/* searchContainer */}
-          <div className="border-none">
+          {/* <div className="border-none">
             <Input
               size="large"
               bordered={false}
@@ -26,11 +26,11 @@ const Categories = () => {
               className="mb-5 rounded-3xl bg-[#FFFFFF3F]"
               defaultValue="Pesquise um Livro"
             />
-          </div>
+          </div> */}
         </div>
         {/* dropdown */}
         <div className="">
-          <Dropdown />
+          <DropDown />
         </div>
         {/* Buttons */}
         <div className="hidden flex-row flex-wrap items-center justify-center gap-6 md:flex">
