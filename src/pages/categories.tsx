@@ -8,7 +8,7 @@ const Categories = () => {
     <>
       <Navbar />
       <div className="flex h-screen flex-col">
-        <div className="flex w-[100%] flex-col items-center justify-center">
+        <div className="flex w-[100%] flex-col items-center justify-center mt-16">
           <h1 className="m-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
             Que categoria Procura?
           </h1>

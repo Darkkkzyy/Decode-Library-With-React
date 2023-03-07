@@ -2,38 +2,64 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./button";
 import Logo from "../../public/Logo.png";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
 
 const Navbar = () => {
-  return (
-    <div className="flex w-full border text-white items-center h-[50px] justify-evenly">
-        <Image src={Logo} className="w-[75px] h-[43px]" alt="Logo Empresa"></Image>
-      <div className="flex justify-between w-1/3 border ">
-        <Link href="/">Home</Link>
-        <Link href="livros">Book</Link>
-        <Link href="categories">Categories</Link>
-        <Link href="aboutus">About Us</Link>
-      </div>
-      <div>
-      <Button visibility tranparent>
-            <Link href="login">Login</Link>
-          </Button>
-      </div>
-    </div>
-    // <div>
-    //   <div>
-    //     <Image src={Logo} className="h-[43px] w-[75px]"></Image>
-    //   </div>
-    //   <div>
-    //     <Link href="/">Home</Link>
-    //     <Link href="asd">Book</Link>
-    //     <Link href="asd">Categories</Link>
-    //     <Link href="asd">About Us</Link>
-    //   </div>
-    //   <div>
-    //     <Button tranparent>Login</Button>
-    //   </div>
+  let Links = [
+    { name: "HOME", link: "/" },
+    { name: "LIVROS", link: "livros" },
+    { name: "CATEGORIES", link: "categories" },
+    { name: "ABOUT US", link: "aboutus" },
+  ];
 
-    // </div>
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="fixed top-0 left-0 w-full shadow-md">
+      <div className="items-center justify-between bg-[#252525] py-4 px-7 md:flex md:px-10">
+        <div
+          className="flex cursor-pointer items-center font-[Poppins] text-2xl font-bold 
+      text-gray-800"
+        >
+          <Image
+            src={Logo}
+            alt={"Decode Logo"}
+            className="h-[33px] w-[65px]"
+          ></Image>{" "}
+        </div>
+
+        <div
+          onClick={() => setOpen(!open)}
+          className="absolute right-8 top-6 cursor-pointer text-3xl md:hidden"
+        >
+          <AiOutlineMenu />
+        </div>
+
+        <ul
+          className={`absolute left-0 z-[-1] w-full bg-[#2e2e2e] pb-12  pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:bg-[#252525] md:pb-0 md:pl-0 ${
+            open ? "top-20 " : "top-[-490px]"
+          }`}
+        >
+          {Links.map((link) => (
+            <li key={link.name} className="my-7 mr-2 text-xl md:my-0 md:ml-8">
+              <a
+                href={link.link}
+                className="text-[#E3E3E3] duration-500 hover:text-gray-400"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+          <div className="md:ml-10">
+            {" "}
+            <Button visibility tranparent>
+            <Link href="login">Login</Link>
+            </Button>
+          </div>
+        </ul>
+      </div>
+    </div>
   );
 };
 
