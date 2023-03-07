@@ -1,10 +1,30 @@
 import capaLivro from "../../public/2.png";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
-const Card = () => {
+
+interface Props {
+  children: ReactNode;
+  title?:string;
+  autor?:string;
+  price?:number;
+
+
+
+
+
+
+
+
+  color?:boolean;
+}
+
+
+const Card = ({ title, autor, price, color}:Props) => {
   return (
     <>
     <div className="flex flex-col flex-wrap m-10 ">
+      
             <div>
               <Image
                 src={capaLivro}
@@ -12,9 +32,9 @@ const Card = () => {
                 alt="capaLivro"
               ></Image>
             </div>
-            <p className="title mb-3 text-[14px] text-white">War Peace</p>
-            <p className="author mb-3 text-[16px] text-white ">Leo Tolstoy</p>
-            <p className="price text-[20px] text-[#FF4E16]">2€/semana</p>
+            <p className= {`title mb-3  text-[14px] ${color?"text-white":"text-black"} `} >{title}</p>
+            <p className= {`author mb-3 text-[16px] ${color?"text-white":"text-black"} `}>{autor}</p>
+            <p className="price text-[20px] text-[#FF4E16]">{price}</p>
           </div>
     </>
   );
