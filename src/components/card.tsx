@@ -8,14 +8,6 @@ interface Props {
   title?:string;
   autor?:string;
   price?:number;
-
-
-
-
-
-
-
-
   color?:boolean;
 }
 
@@ -32,8 +24,8 @@ const Card = ({ title, autor, price, color}:Props) => {
                 alt="capaLivro"
               ></Image>
             </div>
-            <p className= {`title mb-3  text-[14px] ${color?"text-white":"text-black"} `} >{title}</p>
-            <p className= {`author mb-3 text-[16px] ${color?"text-white":"text-black"} `}>{autor}</p>
+            <p className= {`title mb-3  text-[18px] ${color?"text-white":"text-black"} `} >{title}</p>
+            <p className= {`author mb-3 text-[22px] ${color?"text-white":"text-black"} `}>{autor}</p>
             <p className="price text-[20px] text-[#FF4E16]">{price}</p>
           </div>
     </>

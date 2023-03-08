@@ -44,7 +44,7 @@ const items: MenuProps["items"] = [
 const DropDown = () => (
   <>
   <div className="flex justify-center items-center">
-    <Dropdown className="block md:hidden" menu={{ items }} placement="bottomRight">
+    <Dropdown className="block md:hidden w-[340px]" menu={{ items }} placement="bottomRight">
       <Button type="primary" style={{background:"white", borderRadius:"100px", color:"gray"}}>Escolher Categoria<span className="flex justify-between items-center "><IoIosArrowDown/></span></Button>
     </Dropdown>
   </div>
