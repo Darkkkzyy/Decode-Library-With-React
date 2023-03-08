@@ -6,7 +6,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 
 const Navbar = () => {
-  let Links = [
+  const Links = [
     { name: "HOME", link: "/" },
     { name: "LIVROS", link: "livros" },
     { name: "CATEGORIES", link: "categories" },
@@ -51,12 +51,12 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <div className="md:ml-10">
+          <li className="md:ml-10">
             {" "}
             <Button visibility tranparent>
-            <Link href="login">Login</Link>
+              <Link href="login">Login</Link>
             </Button>
-          </div>
+          </li>
         </ul>
       </div>
     </div>
