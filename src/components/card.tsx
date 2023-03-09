@@ -23,7 +23,7 @@ interface Props {
 const Card = ({ title, autor, price, color}:Props) => {
   return (
     <>
-    <div className="flex flex-col flex-wrap m-10 ">
+    <div className="flex flex-col flex-wrap m-4 ">
       
             <div>
               <Image

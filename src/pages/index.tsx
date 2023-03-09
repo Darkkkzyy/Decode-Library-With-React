@@ -7,6 +7,7 @@ import Link from "next/link";
 import Modal from "~/components/Modal";
 import Card from "~/components/card";
 import { Children } from "react";
+import Input from "~/components/input";
 
 const Home: NextPage = () => {
   return (
@@ -47,9 +48,9 @@ const Home: NextPage = () => {
       {/* Home Second Container */}
       <div className=" flex h-screen w-full items-center justify-center bg-slate-100">
         {/* Home Second */}
-        <div className=" flex max-w-7xl  flex-col ">
+        <div className=" flex max-w-7xl flex-col ">
           {/* Home Title*/}
-          <div className=" flex flex-col ">
+          <div className=" flex flex-col  ">
             <h1 className="mb-10 text-[60px] text-black">
               Sempre com novidades
             </h1>
@@ -60,7 +61,7 @@ const Home: NextPage = () => {
           {/* Book Container */}
           <div className=" ">
             {/* Home Books*/}
-            <div className="flex flex-row">
+            <div className="flex flex-col lg:flex-row">
               {/* Container 1 */}
               <div className="flex flex-row">
                 <div>
@@ -81,6 +82,21 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Footer Container */}
+      <div>
+        {/* Footer */}
+        <div>
+          <h1>Sempre com novidades</h1>
+          <p>Veja os novos livros que apareceram!</p>
+          <Button visibility width>
+            <Link href={"/"}>Inscrever</Link>
+          </Button>
+        </div>
+        <div>
+        <Input/>
         </div>
       </div>
     </>
