@@ -8,12 +8,41 @@ import Card from "~/components/card";
 import { Input } from "antd";
 import Link from "next/link";
 
-const Livros = () => {
+
+export const Livros = () => {
   const booksList = [
-    { id: 1, title: "war & peace", href: "/livros/war-peace", image: "" },
-    { id: 2, title: "war & pe", href: "/livros/war-peace", image: "" },
-    { id: 3, title: "war & peace", href: "/livros/war-peace", image: "" },
-    { id: 4, title: "war & peace", href: "/livros/war-peace", image: "" },
+    {
+      id: 1,
+      autor: "teste",
+      title: "war & peace",
+      href: "/livros/war-peace",
+      image: "",
+      descricao: "",
+    },
+    {
+      id: 2,
+      autor: "teste1",
+      title: "a",
+      href: "/livros/war-peace",
+      image: "",
+      descricao: "",
+    },
+    {
+      id: 3,
+      autor: "teste2",
+      title: "teste",
+      href: "/livros/war-peace",
+      image: "",
+      descricao: "",
+    },
+    {
+      id: 4,
+      autor: "teste3",
+      title: "testando",
+      href: "/livros/war-peace",
+      image: "",
+      descricao: "",
+    },
   ];
 
   return (
@@ -56,8 +85,8 @@ const Livros = () => {
 
           {booksList.map((book) => (
             <div key={book.id}>
-              <Link href={book.href}>
-                <Card color  title={book.title} />
+              <Link href={"/livros/id"}>
+                <Card color title={book.title} />
               </Link>
             </div>
           ))}
