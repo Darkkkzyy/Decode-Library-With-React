@@ -42,8 +42,7 @@ const Login = () => {
           </Button>
           <hr className="m-5 w-[60%]" />
           <Button width tranparent visibility>
-            <Link href={"register"}>Não tem Conta? Registe-se aqui</Link>
-            
+            <Link href={"register"}>Não tem Conta? Registe-se aqui</Link>  
           </Button>
         </div>
       </div>
