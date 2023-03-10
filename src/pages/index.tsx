@@ -47,11 +47,11 @@ const Home: NextPage = () => {
       </div>
 
       {/* Home Second Container */}
-      <div className=" flex h-screen w-full items-center justify-center bg-slate-100">
+      <div className=" flex  w-full items-center justify-center bg-slate-100">
         {/* Home Second */}
         <div className=" flex max-w-7xl flex-col ">
           {/* Home Title*/}
-          <div className=" flex flex-col  ">
+          <div className=" flex flex-col  m-6  ">
             <h1 className="mb-10 text-[60px] text-black">
               Sempre com novidades
             </h1>
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           {/* Book Container */}
           <div className=" ">
             {/* Home Books*/}
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex justify-center items-center flex-col lg:flex-row">
               {/* Container 1 */}
               <div className="flex flex-row">
                 <div>
@@ -87,19 +87,18 @@ const Home: NextPage = () => {
       </div>
 
       {/* Footer Container */}
-      <div className="flex h-[400px] w-[1240px] items-center justify-center">
+      <div className="flex h-[700px] flex-col items-center justify-center gap-10 md:flex-row md:h-[400px] md:gap-[260px]">
         {/* Footer */}
-        <div>
-          <h1>Sempre com novidades</h1>
-          <p>Veja os novos livros que apareceram!</p>
-          <div className="flex flex-row items-center justify-center">
+        <div className="">
+          <h1 className="ml-5">Sempre com novidades</h1>
+          <p className="ml-5">Veja os novos livros que apareceram!</p>
+          <div className="flex flex-col items-center justify-center md:flex-row  ">
             <Input />
             <Button visibility width>
               <Link href={"/"}>Inscrever</Link>
             </Button>
           </div> 
         </div>
-        <div className="w-[35%]"></div>
           <Image className="" src={footerImage} alt="Front Livros" />
       </div>
     </>

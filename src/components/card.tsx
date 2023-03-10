@@ -17,10 +17,10 @@ const Card = ({ title, autor, price, color}:Props) => {
     <>
     <div className="flex flex-col flex-wrap m-4 ">
       
-            <div>
+            <div className="flex flex-wrap">
               <Image
                 src={capaLivro}
-                className="h-[160px] w-[110px] md:h-[381px] md:w-[261px]"
+                className="h-[160px] w-[110px] md:h-[260px] md:w-[210px] lg:h-[381px] lg:w-[261px]"
                 alt="capaLivro"
               ></Image>
             </div>
