@@ -7,44 +7,12 @@ import Button from "~/components/button";
 import Card from "~/components/card";
 import { Input } from "antd";
 import Link from "next/link";
+import BooksMocks from "../../mocks/books"
+
 
 
 export const Livros = () => {
-  const booksList = [
-    {
-      id: 1,
-      autor: "teste",
-      title: "war & peace",
-      href: "/livros/war-peace",
-      image: "",
-      descricao: "",
-    },
-    {
-      id: 2,
-      autor: "teste1",
-      title: "a",
-      href: "/livros/war-peace",
-      image: "",
-      descricao: "",
-    },
-    {
-      id: 3,
-      autor: "teste2",
-      title: "teste",
-      href: "/livros/war-peace",
-      image: "",
-      descricao: "",
-    },
-    {
-      id: 4,
-      autor: "teste3",
-      title: "testando",
-      href: "/livros/war-peace",
-      image: "",
-      descricao: "",
-    },
-  ];
-
+  
   return (
     <>
       <Navbar />
@@ -83,13 +51,7 @@ export const Livros = () => {
             <p className="addBook mt-3">Adicionar um livro</p>
           </div>
 
-          {booksList.map((book) => (
-            <div key={book.id}>
-              <Link href={"/livros/id"}>
-                <Card color title={book.title} />
-              </Link>
-            </div>
-          ))}
+          
         </div>
       </div>
     </>
