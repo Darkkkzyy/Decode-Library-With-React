@@ -8,6 +8,7 @@ import Modal from "~/components/Modal";
 import Card from "~/components/card";
 import { Children } from "react";
 import Input from "~/components/input";
+import footerImage from "../../public/Footer.png";
 
 const Home: NextPage = () => {
   return (
@@ -86,18 +87,20 @@ const Home: NextPage = () => {
       </div>
 
       {/* Footer Container */}
-      <div>
+      <div className="flex h-[400px] w-[1240px] items-center justify-center">
         {/* Footer */}
         <div>
           <h1>Sempre com novidades</h1>
           <p>Veja os novos livros que apareceram!</p>
-          <Button visibility width>
-            <Link href={"/"}>Inscrever</Link>
-          </Button>
+          <div className="flex flex-row items-center justify-center">
+            <Input />
+            <Button visibility width>
+              <Link href={"/"}>Inscrever</Link>
+            </Button>
+          </div> 
         </div>
-        <div>
-        <Input/>
-        </div>
+        <div className="w-[35%]"></div>
+          <Image className="" src={footerImage} alt="Front Livros" />
       </div>
     </>
   );
