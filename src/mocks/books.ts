@@ -1,40 +1,38 @@
-const BooksMocks = () => {
-        const booksList = [
-          {
-            id: 1,
-            autor: "teste",
-            title: "war & peace",
-            href: "/livros/war-peace",
-            image: "",
-            descricao: "",
-          },
-          {
-            id: 2,
-            autor: "teste1",
-            title: "a",
-            href: "/livros/war-peace",
-            image: "",
-            descricao: "",
-          },
-          {
-            id: 3,
-            autor: "teste2",
-            title: "teste",
-            href: "/livros/war-peace",
-            image: "",
-            descricao: "",
-          },
-          {
-            id: 4,
-            autor: "teste3",
-            title: "testando",
-            href: "/livros/war-peace",
-            image: "",
-            descricao: "",
-          },
-        ];
-        
-    return booksList;
-}
- 
-export default BooksMocks;
+export const BooksMocks = [
+  {
+    id: "1",
+    autor: "teste",
+    title: "war & peace",
+    href: "/livros/war-peace",
+    price:32,
+    image: "",
+    descricao: "",
+  },
+  {
+    id: "2",
+    autor: "teste1",
+    title: "a",
+    href: "/livros/war-peace",
+    price:123,
+    image: "",
+    descricao: "",
+  },
+  {
+    id: "3",
+    autor: "teste2",
+    title: "teste",
+    price:123,
+    href: "/livros/war-peace",
+    image: "",
+    descricao: "",
+  },
+  {
+    id: "4",
+    autor: "teste3",
+    price:232,
+    title: "testando",
+    href: "/livros/war-peace",
+    image: "",
+    descricao: "",
+  },
+];

@@ -1,18 +1,26 @@
 import plusimg from "../../../public/image.png";
 import Navbar from "~/components/navbar";
 import { FaSearch } from "react-icons/fa";
-import { BsPlusSquare } from "react-icons/bs";
 import Image from "next/image";
 import Button from "~/components/button";
 import Card from "~/components/card";
 import { Input } from "antd";
 import Link from "next/link";
-import BooksMocks from "../../mocks/books"
-
+import { BooksMocks } from "../../mocks/books";
+import Modal from "~/components/Modal";
+import { useState } from "react";
 
 
 export const Livros = () => {
-  
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
+  };  
   return (
     <>
       <Navbar />
@@ -37,21 +45,22 @@ export const Livros = () => {
             />
           </div>
         </div>
-        <Button width tranparent>
-          <span className="flex items-center justify-center gap-5">
-            <BsPlusSquare />
-            Adicionar Livro
-          </span>
-        </Button>
+     
         <div className="flex flex-row flex-wrap items-center justify-center ">
           <div className="hidden h-[480px] flex-col md:mr-[24px] md:flex ">
-            <button className=" mb-3 flex  h-[381px] w-[261px] items-center justify-center border">
+            <button onClick={handleOpenModal} className=" mb-3 flex  h-[381px] w-[261px] items-center justify-center border">
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>
+            <Modal visible={isModalVisible} onClose={handleCloseModal} Texto="abrir" style><div></div></Modal>
           </div>
-
-          
+          {BooksMocks.map((book) => (
+            <div key={book.id}>
+              <Link href={`/livros/${book.id}`}>
+                <Card color title={book.title}  />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>

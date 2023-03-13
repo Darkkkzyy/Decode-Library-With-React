@@ -8,10 +8,12 @@ interface Props {
   bgColor?:boolean;
 }
 
-const Button = ({ children, tranparent,width,visibility,bgColor }: Props) => {
+const Button = ({ children, tranparent,width,visibility,bgColor}: Props) => {
    return (//justify-center
-    <div className="flex items-center ">
-      <button
+
+<>
+    <div className="flex items-center ">  
+      <button 
         className={`h-[43px] w-[360px] rounded-full ${tranparent  ? "border border-white bg-transparent" : "bg-[#FF4E16]  hover:bg-orange-700" } py-2 px-4 font-bold text-white
         ${
           width
@@ -33,6 +35,7 @@ const Button = ({ children, tranparent,width,visibility,bgColor }: Props) => {
         {children}
       </button>
     </div>
+    </>
   );
 };
 
