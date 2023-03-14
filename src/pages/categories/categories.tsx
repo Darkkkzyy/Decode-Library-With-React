@@ -3,6 +3,11 @@ import Navbar from "~/components/navbar";
 import { FaSearch } from "react-icons/fa";
 import Input from "antd/es/input";
 import DropDown from "~/components/dropdown";
+import { CategoriesMocks } from "../../mocks/categories";
+import Link from "next/link";
+import Card from "~/components/card";
+
+
 const Categories = () => {
   return (
     <>
@@ -34,7 +39,14 @@ const Categories = () => {
         </div>
         {/* Buttons */}
         <div className="hidden flex-row flex-wrap items-center justify-center gap-6 md:flex">
-          <Button visibility tranparent width>
+        {CategoriesMocks.map((categorie) => (
+            <div key={categorie.id}>
+              <Link href={`/livros/${categorie.id}`}>
+                <Button tranparent visibility width>{categorie.categories}</Button>
+              </Link>
+            </div>
+          ))}
+          {/* <Button visibility tranparent width>
             <span className="flex items-center justify-center">
               Desenvolvimento Pessoal
             </span>
@@ -53,7 +65,7 @@ const Categories = () => {
             <span className="flex items-center justify-center">
               Desenvolvimento Pessoal
             </span>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </>
