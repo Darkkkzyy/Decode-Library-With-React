@@ -11,9 +11,7 @@ import Modal from "~/components/Modal";
 import { useState } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 
-
 export const Livros = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -33,33 +31,26 @@ export const Livros = () => {
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input
-              size="large"
-              bordered={false}
-              allowClear
-              addonBefore={
-                <span className="border-none">
-                  <FaSearch />
-                </span>
-              }
-              className="mb-5 w-96 rounded-3xl bg-[#FFFFFF3F]"
-              defaultValue="Pesquise um Livro"
-            />
+            <Input label="Pesquise um Livro" showIcon={true} />
           </div>
         </div>
 
-        <Button onClick={handleModalOpen}  width tranparent>
+        <Button onClick={handleModalOpen} width tranparent>
           <div>
-             <span className="flex items-center justify-center gap-5">
-            <BsPlusSquare />
-            Adicionar Livro
-          </span>
-          <Modal title="Adicionar um Livro" isOpen={isModalOpen} onClose={handleModalClose} >
-              <div className="flex justify-center flex-col items-center">
-             <Input label="teste"/>
-             <Input label="teste"/>
-             <Input label="teste"/>
-             <Input label="teste"/>
+            <span className="flex items-center justify-center gap-5">
+              <BsPlusSquare />
+              Adicionar Livro
+            </span>
+            <Modal
+              title="Adicionar um Livro"
+              isOpen={isModalOpen}
+              onClose={handleModalClose}
+            >
+              <div className="flex flex-col items-center justify-center">
+                <Input label="Titulo do Livro" />
+                <Input label="Autor" />
+                <Input label="Categoria" />
+                <Input label="Editora" />
               </div>
             </Modal>
           </div>
@@ -67,23 +58,30 @@ export const Livros = () => {
 
         <div className="flex flex-row flex-wrap items-center justify-center ">
           <div className="hidden h-[480px] flex-col md:mr-[24px] md:flex ">
-            <button onClick={handleModalOpen} className=" mb-3 flex  h-[381px] w-[261px] items-center justify-center border">
+            <button
+              onClick={handleModalOpen}
+              className=" mb-3 flex  h-[381px] w-[261px] items-center justify-center border"
+            >
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>
-            <Modal title="Adicionar um Livro" isOpen={isModalOpen} onClose={handleModalClose} >
-              <div className="flex justify-center flex-col items-center">
-             <Input label="Titulo do Livro"/>
-             <Input label="Autor"/>
-             <Input label="Categoria"/>
-             <Input label="Editora"/>
+            <Modal
+              title="Adicionar um Livro"
+              isOpen={isModalOpen}
+              onClose={handleModalClose}
+            >
+              <div className="flex flex-col items-center justify-center">
+                <Input label="Titulo do Livro" />
+                <Input label="Autor" />
+                <Input label="Categoria" />
+                <Input label="Editora" />
               </div>
             </Modal>
           </div>
           {BooksMocks.map((book) => (
             <div key={book.id}>
               <Link href={`/livros/${book.id}`}>
-                <Card color title={book.title}  />
+                <Card color title={book.title} />
               </Link>
             </div>
           ))}
