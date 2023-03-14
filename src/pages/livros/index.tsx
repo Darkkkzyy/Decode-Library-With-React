@@ -31,7 +31,9 @@ export const Livros = () => {
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input label="Pesquise um Livro" showIcon={true} />
+            <Input label="Pesquise um Livro" showIcon={true} >
+            <FaSearch className="icon"  />
+            </Input>
           </div>
         </div>
 
