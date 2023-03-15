@@ -54,6 +54,11 @@ const Details = () => {
               isOpen={isModalOpen}
               onClose={handleModalClose}
             >
+              <div className="flex justify-center items-center">
+                <p>Este livro custa x por semana</p>
+                <p className="text-[18px] text-[#FF4E16]">Total de: {book.price}</p>
+              </div>
+              
             </Modal>
               </Button>
             </div>

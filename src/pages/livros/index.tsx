@@ -61,7 +61,7 @@ export const Livros = () => {
         </Button>
 
         <div className="flex flex-row flex-wrap items-center justify-center ">
-          <div className="hidden h-[445px] flex-col md:mr-[24px] md:flex ">
+          <div className="hidden h-[432px] flex-col md:mr-[24px] md:flex ">
             <button
               onClick={handleModalOpen}
               className=" flex  h-[381px] w-[261px] items-center justify-center border"
