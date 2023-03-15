@@ -31,12 +31,13 @@ export const Livros = () => {
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input label="Pesquise um Livro" showIcon={true} >
-            <FaSearch className="icon"  />
+            <Input label="Pesquise um Livro">
+              {/* <FaSearch className="icon"  /> */}
             </Input>
           </div>
         </div>
 
+        {/* on click abr o modal */}
         <Button onClick={handleModalOpen} width tranparent>
           <div>
             <span className="flex items-center justify-center gap-5">
@@ -44,6 +45,7 @@ export const Livros = () => {
               Adicionar Livro
             </span>
             <Modal
+              text={"Adicionar"}
               title="Adicionar um Livro"
               isOpen={isModalOpen}
               onClose={handleModalClose}
@@ -59,15 +61,16 @@ export const Livros = () => {
         </Button>
 
         <div className="flex flex-row flex-wrap items-center justify-center ">
-          <div className="hidden h-[480px] flex-col md:mr-[24px] md:flex ">
+          <div className="hidden h-[445px] flex-col md:mr-[24px] md:flex ">
             <button
               onClick={handleModalOpen}
-              className=" mb-3 flex  h-[381px] w-[261px] items-center justify-center border"
+              className=" flex  h-[381px] w-[261px] items-center justify-center border"
             >
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>
             <Modal
+              text={"Adcionar"}
               title="Adicionar um Livro"
               isOpen={isModalOpen}
               onClose={handleModalClose}

@@ -6,7 +6,7 @@ interface Props {
   tranparent?: boolean;
   visibility?:boolean;
   bgColor?:boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({ children, tranparent,width,visibility,bgColor,onClick}: Props) => {
