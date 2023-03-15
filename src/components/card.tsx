@@ -6,10 +6,9 @@ interface Props {
   autor?: string;
   price?: number;
   color?: boolean;
-  liimgWidth?: boolean;
 }
 
-const Card = ({ title, autor, price, color, imgWidth }: Props) => {
+const Card = ({ title, autor, price, color }: Props) => {
   return (
     <>
       <div
@@ -19,7 +18,7 @@ const Card = ({ title, autor, price, color, imgWidth }: Props) => {
           <Image
             src={capaLivro}
             className={`h-[160px] w-[110px] md:h-[260px] md:w-[210px] lg:h-[381px] lg:w-[261px]
-            ${imgWidth ? "h-[381px] lg:w-[261px]" : "h-[360px] lg:w-[520px]"} `}
+             `}
             alt="capaLivro"
           ></Image>
         </div>
