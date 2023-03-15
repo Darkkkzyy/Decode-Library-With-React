@@ -7,6 +7,7 @@ export const BooksMocks = [
     price:32,
     image: "",
     descricao: "",
+    editora:""
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ export const BooksMocks = [
     price:123,
     image: "",
     descricao: "",
+    editora:""
   },
   {
     id: "3",
@@ -25,6 +27,7 @@ export const BooksMocks = [
     href: "/livros/war-peace",
     image: "",
     descricao: "",
+    editora:""
   },
   {
     id: "4",
@@ -34,5 +37,6 @@ export const BooksMocks = [
     href: "/livros/war-peace",
     image: "",
     descricao: "",
+    editora:""
   },
 ];

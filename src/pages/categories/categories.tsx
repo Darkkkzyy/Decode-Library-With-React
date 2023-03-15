@@ -26,7 +26,7 @@ const Categories = () => {
         <div className="hidden flex-row flex-wrap items-center justify-center gap-6 md:flex">
         {CategoriesMocks.map((categorie) => (
             <div key={categorie.id}>
-              <Link href={`/livros/${categorie.id}`}>
+              <Link href={`/livros`}>
                 <Button tranparent visibility width>{categorie.categories}</Button>
               </Link>
             </div>

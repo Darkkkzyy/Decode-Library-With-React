@@ -6,19 +6,18 @@ interface Props {
   autor?: string;
   price?: number;
   color?: boolean;
+  width?: boolean;
 }
 
-const Card = ({ title, autor, price, color }: Props) => {
+const Card = ({ title, autor, price, color, width }: Props) => {
   return (
     <>
-      <div
-        className={`m-4 flex flex-col flex-wrap `}
-      >
+      <div className={`m-4 flex flex-col flex-wrap `}>
         <div className="flex flex-wrap">
           <Image
             src={capaLivro}
             className={`h-[160px] w-[110px] md:h-[260px] md:w-[210px] lg:h-[381px] lg:w-[261px]
-             `}
+            `}
             alt="capaLivro"
           ></Image>
         </div>
@@ -29,11 +28,7 @@ const Card = ({ title, autor, price, color }: Props) => {
         >
           {title}
         </p>
-        <p
-          className={`author mt-3 text-[22px] ${
-            color ? "text-white" : "text-black"
-          } `}
-        >
+        <p className={`author  ${color ? "text-white" : "text-black"} `}>
           {autor}
         </p>
         <p className="price text-[20px] text-[#FF4E16]">{price}</p>

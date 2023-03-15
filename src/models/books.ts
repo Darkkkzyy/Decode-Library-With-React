@@ -6,4 +6,5 @@ export interface Books  {
     href: string;
     image: string;
     descricao: string;
+    editora:string;
 }

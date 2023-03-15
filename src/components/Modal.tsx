@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type Prop = {
   children: ReactNode;
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
   title: string;
   text:string;
   rounded?:boolean;

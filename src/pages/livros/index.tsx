@@ -27,7 +27,7 @@ export const Livros = () => {
       container principal
       <div className="flex h-screen w-full flex-col items-center ">
         <div className="flex w-[80%] flex-col items-center justify-center">
-          <h1 className="m-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
+          <h1 className="m-16 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
             A nossa biblioteca
           </h1>
           <div className="border-none">

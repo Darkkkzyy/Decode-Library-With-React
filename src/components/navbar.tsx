@@ -9,9 +9,9 @@ import { useState } from "react";
 const Navbar = () => {
   const Links = [
     { name: "HOME", link: "/" },
-    { name: "LIVROS", link: "livros" },
-    { name: "CATEGORIES", link: "/categories/categories" },
-    { name: "ABOUT US", link: "aboutus" },
+    { name: "LIVROS", link: "/livros" },
+    { name: "CATEGORIES", link: " categories/categories" },
+    { name: "ABOUT US", link: "/aboutus" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -23,11 +23,12 @@ const Navbar = () => {
           className="flex cursor-pointer items-center font-[Poppins] text-2xl font-bold 
       text-gray-800"
         >
+          <Link href={"/"}>
           <Image
             src={Logo}
             alt={"Decode Logo"}
             className="h-[33px] w-[65px]"
-          ></Image>{" "}
+          ></Image></Link>
         </div>
 
         <div
