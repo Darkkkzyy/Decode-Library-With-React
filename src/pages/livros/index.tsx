@@ -31,7 +31,7 @@ export const Livros = () => {
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input label="Pesquise um Livro">
+            <Input  label="Pesquise um Livro">
               {/* <FaSearch className="icon"  /> */}
             </Input>
           </div>
@@ -69,7 +69,7 @@ export const Livros = () => {
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>
-            <Modal
+            <Modal rounded
               text={"Adcionar"}
               title="Adicionar um Livro"
               isOpen={isModalOpen}
