@@ -35,11 +35,11 @@ const AboutUs = () => {
               dolor.
             </p>{" "}
           </div>
-          <div className="flex w-[50%] items-center justify-center ">
+          <div className="flex w-[50%] justify-center ">
             <Image
               src={frontImage}
               alt="Sua imagem aqui"
-              className="w-[100%]"
+              className="w-[60%]"
             ></Image>
           </div>
         </div>
