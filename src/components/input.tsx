@@ -1,4 +1,4 @@
-import { FaSearch } from "react-icons/fa";
+//import { FaSearch } from "react-icons/fa";
 
 interface Props {
   label: string;
