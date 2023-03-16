@@ -12,8 +12,8 @@ const AboutUs = () => {
         <div className="flex h-screen w-full flex-col items-center justify-center px-[12rem]">
           <h1 className="self-start">Sobre Nós</h1>
           {/* Container Text */}
-          <div className="flex flex-col items-center justify-center md:flex-row  ">
-            {/* Container Left */}
+          <div className="flex flex-col items-center justify-center lg:flex-row  ">
+            {/* Container Left */}                                          
             <div className="flex w-[55%] flex-col gap-[40px]">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
