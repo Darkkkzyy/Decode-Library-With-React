@@ -6,6 +6,7 @@ import Card from "~/components/card";
 import Dropdown from "~/components/dropdown";
 import Modal from "~/components/Modal";
 import Navbar from "~/components/navbar";
+import { CategoriesMocks } from "~/mocks/categories";
 import type { Books } from "~/models/books";
 import { BooksMocks } from "../../mocks/books";
 
@@ -22,7 +23,6 @@ const Details = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
-  const options = ['Option 1', 'Option 2', 'Option 3']
 
   return (
     <>
@@ -38,8 +38,6 @@ const Details = () => {
             key={book.id}
             className="flex h-[70vh] w-[100vw] flex-col items-center justify-center sm:flex-row sm:gap-52"
           >
-            <Dropdown options={options} />
-
             <Card />
             <div className="mb-24">
               <h1 className="mb-7 text-[40px]">{book.title}</h1>

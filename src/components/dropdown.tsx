@@ -1,60 +1,52 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { CategoriesMocks } from "../mocks/categories";
 
-interface DropdownProps {
-  options: string[]
-}
+type DropdownProps = {
+  items: Category[];
+};
 
-interface DropdownProps {
-  options: string[]
-}
 
-const Dropdown: React.FC<DropdownProps> = ({ options = [] }) => {
-  const [selectedOption, setSelectedOption] = useState(options[0])
-  const [isOpen, setIsOpen] = useState(false)
+const Dropdown = ({ items }: DropdownProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="relative inline-block text-left">
-      <div>
-        <span className="rounded-md shadow-sm">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            id="options-menu"
-            aria-haspopup="true"
-            aria-expanded="true"
-          >
-            {selectedOption} 
-            {/* <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" /> */}
-          </button>
-        </span>
-      </div>
-
+    <div className="flex justify-center items-center flex-col">
+      <button
+        className="flex justify-between  bg-white rounded-[100px] text-[#AAAAAA] font-semibold py-2 px-4   items-center w-[300px]"
+        onClick={toggle}
+      >
+        
+        <span>{isOpen ? 'Fechar' : 'Escolher Categoria'}</span>
+     
+        <svg
+          className={`${
+            isOpen ? 'transform rotate-180' : ''
+          } w-4 h-4 ml-2`}
+          viewBox="0 0 20 20"
+          fill="#FF4E16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
       {isOpen && (
-        <div className="absolute z-50 mt-2 w-full rounded-md bg-white shadow-lg">
-          <ul
-            className="py-1 overflow-auto text-base rounded-md leading-6 shadow-xs max-h-60 focus:outline-none sm:text-sm sm:leading-5"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="options-menu"
-          >
-            {options.map((option) => (
-              <li
-                key={option}
-                className="text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9"
-                onClick={() => {
-                  setSelectedOption(option)
-                  setIsOpen(false)
-                }}
-              >
-                <span className="font-normal block truncate">{option}</span>
-              </li>
-            ))}
-          </ul>
+        <div className=" right-0 mt-2 py-2 w-[300px] bg-white rounded-md shadow-xl z-50">
+          {CategoriesMocks.map((item) => (
+            <a
+              key={item.id}
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              {item.categories}
+            </a>
+          ))}
         </div>
       )}
     </div>
-  )
-}
-
-export default Dropdown
+  );
+};
+export default Dropdown;
