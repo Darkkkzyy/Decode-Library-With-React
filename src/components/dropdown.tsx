@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { CategoriesMocks } from "../mocks/categories";
 
 type DropdownProps = {
-  items: Category[];
+  items: [];
 };
 
 
