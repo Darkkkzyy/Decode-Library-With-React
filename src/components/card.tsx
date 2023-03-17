@@ -16,7 +16,8 @@ const Card = ({ title, autor, price, color, width }: Props) => {
         <div className="flex flex-wrap">
           <Image
             src={capaLivro}
-            className={`h-[160px] w-[110px] md:h-[260px] md:w-[210px] lg:h-[381px] lg:w-[261px]
+            className={`h-[160px] w-[110px] md:h-[260px] md:w-[210px] lg:h-[381px] lg:w-[310px]
+           
             `}
             alt="capaLivro"
           ></Image>

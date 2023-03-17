@@ -27,19 +27,19 @@ const Details = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-[100vh] w-[100vw] flex-col items-center ">
+      <div className="flex h-[100vh] w-[100vw] flex-col items-center justify-center gap-0 md:gap-5">
         <div className="flex items-center justify-center">
-          <h1 className="mt-28 w-[100vw]  self-start whitespace-nowrap p-5 text-3xl text-white sm:self-center  sm:text-6xl">
+          <h1 className=" w-[100vw]  self-start whitespace-nowrap p-5 text-3xl text-white md:self-center  md:text-6xl">
             Details Page
           </h1>
         </div>
         {book.map((book) => (
           <div
             key={book.id}
-            className="flex h-[70vh] w-[100vw] flex-col items-center justify-center sm:flex-row sm:gap-52"
+            className="flex h-[70vh] w-[100vw] flex-col items-center justify-center md:flex-row md:gap-52 "
           >
-            <Card />
-            <div className="mb-24">
+            <Card width={true}/>
+            <div className="">
               <h1 className="mb-7 text-[40px]">{book.title}</h1>
               <p className="mb-7 text-[28px] text-[#FF4E16]">{book.price}</p>
               <p className="mb-7 text-[20px]">{book.autor}</p>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Button from "./button";
 import Logo from "../../public/Logo.png";
 import { useState } from "react";
-//import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
           onClick={() => setOpen(!open)}
           className="absolute right-8 top-6 cursor-pointer text-3xl md:hidden"
         >
-          {/*<AiOutlineMenu />*/}
+          <AiOutlineMenu />
         </div>
 
         <ul
