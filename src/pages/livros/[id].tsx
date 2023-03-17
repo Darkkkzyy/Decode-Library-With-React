@@ -1,12 +1,9 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Button from "~/components/button";
 import Card from "~/components/card";
-import Dropdown from "~/components/dropdown";
 import Modal from "~/components/Modal";
 import Navbar from "~/components/navbar";
-import { CategoriesMocks } from "~/mocks/categories";
 import type { Books } from "~/models/books";
 import { BooksMocks } from "../../mocks/books";
 
@@ -38,7 +35,7 @@ const Details = () => {
             key={book.id}
             className="flex h-[70vh] w-[100vw] flex-col items-center justify-center md:flex-row md:gap-52 "
           >
-            <Card width={true}/>
+            <Card/>
             <div className="">
               <h1 className="mb-7 text-[40px]">{book.title}</h1>
               <p className="mb-7 text-[28px] text-[#FF4E16]">{book.price}</p>

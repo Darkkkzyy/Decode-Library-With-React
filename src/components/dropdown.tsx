@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { CategoriesMocks } from "../mocks/categories";
 
-type DropdownProps = {
+/*type DropdownProps = {
   items: [];
-};
+};*/
 
 
-const Dropdown = ({ items }: DropdownProps) => {
+const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 

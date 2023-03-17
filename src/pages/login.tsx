@@ -34,8 +34,8 @@ const Login = () => {
           <div className="self-center sm:self-start">
             <h2 className="text-4xl mr-6 text-white">Login</h2>
           </div>
-          <Input />
-          <Input />
+          <Input label="teste" />
+          <Input label="teste" />
           <CheckButton />
           <Button width visibility>
             <Link href="login">Login</Link>

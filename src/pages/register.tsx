@@ -37,8 +37,8 @@ const Login = () => {
           <div className="self-center sm:self-start">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
-          <Input />
-          <Input />
+          <Input label="teste" />
+          <Input label="teste" />
           <CheckButton />
           <Button width visibility>
             <Link href="login">Register</Link>

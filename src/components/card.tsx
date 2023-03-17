@@ -6,10 +6,9 @@ interface Props {
   autor?: string;
   price?: number;
   color?: boolean;
-  width?: boolean;
 }
 
-const Card = ({ title, autor, price, color, width }: Props) => {
+const Card = ({ title, autor, price, color }: Props) => {
   return (
     <>
       <div className={`m-4 flex flex-col flex-wrap `}>

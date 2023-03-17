@@ -1,6 +1,5 @@
 import plusimg from "../../../public/image.png";
 import Navbar from "~/components/navbar";
-import { FaSearch } from "react-icons/fa";
 import Image from "next/image";
 import Card from "~/components/card";
 import Input from "~/components/input";
@@ -31,9 +30,7 @@ export const Livros = () => {
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input  label="Pesquise um Livro">
-              {/* <FaSearch className="icon"  /> */}
-            </Input>
+            <Input  label="Pesquise um Livro"/>
           </div>
         </div>
 
