@@ -42,7 +42,7 @@ const Details = () => {
               <p className="mb-7 text-[20px]">{book.autor}</p>
               <p className="mb-7">{book.editora}</p>
               <Button visibility width onClick={handleModalOpen}>
-                Requisitar
+                Requisitar</Button>
                 <Modal
                   text={"Requisitar"}
                   title="Requisitar"
@@ -56,7 +56,7 @@ const Details = () => {
                     </p>
                   </div>
                 </Modal>
-              </Button>
+              
             </div>
           </div>
         ))}

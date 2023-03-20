@@ -1,4 +1,3 @@
-import { type NextPage } from "next";
 import Image from "next/image";
 import Navbar from "~/components/navbar";
 import Button from "~/components/button";
@@ -6,11 +5,11 @@ import frontImage from "../../public/book.png";
 import Link from "next/link";
 import Modal from "~/components/Modal";
 import Card from "~/components/card";
-import {  useState } from "react";
+import { useState } from "react";
 import Input from "~/components/input";
 import footerImage from "../../public/Footer.png";
 
-const Home: NextPage = () => {
+export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -21,7 +20,6 @@ const Home: NextPage = () => {
     setIsModalOpen(false);
   };
   return (
-    
     <>
       <Navbar />
       {/* HomeFirstContainer */}
@@ -43,7 +41,6 @@ const Home: NextPage = () => {
                 <Link href={"/livros"}>Requisite já o seu livro</Link>
               </Button>
             </div>
-            <a href="/Decode-Library/Library"></a>
           </div>
           {/* Container Right */}
           <div className=" m-3 hidden items-center justify-center lg:flex">
@@ -61,7 +58,7 @@ const Home: NextPage = () => {
         {/* Home Second */}
         <div className=" flex max-w-7xl flex-col ">
           {/* Home Title*/}
-          <div className=" flex flex-col  m-6  ">
+          <div className=" m-6 flex  flex-col  ">
             <h1 className="mb-10 text-[60px] text-black">
               Sempre com novidades
             </h1>
@@ -72,7 +69,7 @@ const Home: NextPage = () => {
           {/* Book Container */}
           <div className=" ">
             {/* Home Books*/}
-            <div className="flex justify-center items-center flex-col lg:flex-row">
+            <div className="flex flex-col items-center justify-center lg:flex-row">
               {/* Container 1 */}
               <div className="flex flex-row">
                 <div>
@@ -97,29 +94,34 @@ const Home: NextPage = () => {
       </div>
 
       {/* Footer Container */}
-      <div className="flex h-[700px] flex-col items-center justify-center gap-10 md:flex-row md:h-[400px] md:gap-[260px]">
+      <div className="flex h-[700px] flex-col items-center justify-center gap-10 md:h-[400px] md:flex-row md:gap-[260px]">
         {/* Footer */}
         <div className="">
           <h1 className="ml-5">Sempre com novidades</h1>
           <p className="ml-5">Veja os novos livros que apareceram!</p>
-          <div className="flex flex-col items-center justify-center md:flex-row  ml-0">
+          <div className="ml-0 flex flex-col items-center justify-center  md:flex-row">
             <Input label="teste" />
             {/* Modal */}
             <Button onClick={handleModalOpen} visibility width>
+              {" "}
               <Link href={"/"}>Inscrever</Link>
-              <Modal rounded text="Voltar"
+            </Button>
+            <Modal
+              rounded
+              text="Voltar"
               title="Inscrição Feita"
               isOpen={isModalOpen}
               onClose={handleModalClose}
             >
               <div className="flex flex-col items-center justify-center">
-              <p className="text-white text-sm mt-5">Irá receber as nossas novidades no seu email.</p>
+                <p className="mt-5 text-sm text-white">
+                  Irá receber as nossas novidades no seu email.
+                </p>
               </div>
-            </Modal>    
-            </Button>
-          </div> 
+            </Modal>
+          </div>
         </div>
-          <Image className="" src={footerImage} alt="Front Livros" />
+        <Image className="" src={footerImage} alt="Front Livros" />
       </div>
     </>
   );
