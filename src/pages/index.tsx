@@ -40,7 +40,7 @@ export const Home = () => {
             <p className=" mb-10 block text-[20px]">{t("discoverText")}</p>
             <div className="justify-left flex">
               <Button visibility width>
-                <Link href={"/livros"}>{t("orderBook")}</Link>
+                <Link href={"/livros"}>{t("button.orderbook")}</Link>
               </Button>
             </div>
           </div>
