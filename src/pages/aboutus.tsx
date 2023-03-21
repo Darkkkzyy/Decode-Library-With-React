@@ -6,10 +6,10 @@ const AboutUs = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-[50%] items-center justify-center lg:h-screen ">
-        <div className="mt-10 flex h-[80%] w-full flex-col items-center justify-center lg:flex-row">
-          <div className="mt-10  w-full lg:p-20 md:w-[50%]">
-            <h1 className="mb-8 text-3xl font-bold">Seu texto aqui</h1>
+      <div className="flex h-[50%] items-center justify-center lg:h-screen mt-5 sm:mt-0 ">
+        <div className="mt-16 sm:mt-0 flex h-[80%] w-full flex-col items-center justify-center lg:flex-row gap-6 sm:gap-0">
+          <div className="mt-10  w-full lg:p-20 md:w-[50%] p-3 sm:p-0">
+            <h1 className="mb-8 text-3xl font-bold ">Seu texto aqui</h1>
             <p className="">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque ut ullamcorper ut viverra felis orci, non. Non, ac
@@ -35,11 +35,11 @@ const AboutUs = () => {
               dolor.
             </p>{" "}
           </div>
-          <div className="flex w-[50%] justify-center ">
+          <div className="flex w-[100%] justify-center sm:w-[50%] ">
             <Image
               src={frontImage}
               alt="Sua imagem aqui"
-              className="w-[60%]"
+              className="w-[100%] sm:w-[60%]"
             ></Image>
           </div>
         </div>
