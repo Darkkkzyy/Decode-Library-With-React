@@ -30,9 +30,9 @@ export const Home = () => {
       {/* HomeFirstContainer */}
       <div className="flex h-screen w-full  items-center justify-center  ">
         {/* Home First */}
-        <div className="flex max-w-7xl gap-5">
+        <div className="flex max-w-7xl gap-10">
           {/* Container Left */}
-          <div className=" m-3  flex-col justify-center lg:flex  ">
+          <div className=" m-3  flex-col justify-center lg:flex   ">
             <h1 className="mb-10 text-[60px]">
               {/* vai buscar a chave welcome=valor */}
               {t("welcomeToPage")}
@@ -45,7 +45,7 @@ export const Home = () => {
             </div>
           </div>
           {/* Container Right */}
-          <div className=" m-3 hidden items-center justify-center lg:flex">
+          <div className=" m-3 hidden items-center justify-center lg:flex ml-10">
             <Image
               className=" h-full w-[1400px]"
               src={frontImage}

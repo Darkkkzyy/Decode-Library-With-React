@@ -1,12 +1,17 @@
 {
   "translation": {
-    "welcomeToPage": "Welcome to our online library",
-    "discoverText": "Discover novels, mythical stories, biographies and more in our library. Order your next book easily and in just a few steps",
-    "alwaysNews": "Always with news",
-    "seeNewBooks": "See the new books that have appeared!",
-    "newsLetter": "Subscribe to our newsletter",
-    "receiveNews": "Receive news and news that awaits you.",
-    "modalHome": "You will receive our news in your email.",
-    "titleModalHome": "Registration done"
+    "homePage": {
+      "welcomeToPage": "Welcome to our online library",
+      "discoverText": "Discover novels, mythical stories, biographies and more in our library. Order your next book easily and in just a few steps",
+      "alwaysNews": "Always with news",
+      "seeNewBooks": "See the new books that have appeared!",
+      "newsLetter": "Subscribe to our newsletter",
+      "receiveNews": "Receive news and news that awaits you.",
+      "modalHome": "You will receive our news in your email.",
+      "titleModalHome": "Registration done",
+      "button": {
+        "orderbook": "Order a book now"
+      }
+    }
   }
 }

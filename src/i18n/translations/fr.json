@@ -1,12 +1,18 @@
 {
   "translation": {
-    "welcomeToPage": "Bienvenue dans notre bibliothèque en ligne",
+    "homePage":{
+      "welcomeToPage": "Bienvenue dans notre bibliothèque en ligne",
     "discoverText": "Découvrez des romans, des histoires mythiques, des biographies et plus encore dans notre bibliothèque. Commandez votre prochain livre facilement et en quelques étapes",
     "alwaysNews": "Toujours avec des nouvelles",
     "seeNewBooks": "Découvrez les nouveaux livres parus !",
     "newsLetter": "Abonnez-vous à notre newsletter",
     "receiveNews": "Recevez les actualités et nouveautés qui vous attendent.",
     "modalHome": "Vous recevrez nos nouvelles dans votre e-mail.",
-    "titleModalHome": "Inscription effectuée"
+    "titleModalHome": "Inscription effectuée",
+    "button":{
+      "orderbook":"Commandez un livre maintenant"
+    }
+    }
+   
   }
 }

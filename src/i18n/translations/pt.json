@@ -1,5 +1,6 @@
 {
   "translation": {
+    "homePage": {
     "welcomeToPage": "Bem-vindo à nossa biblioteca online",
     "discoverText": "Descruba os romances, histórias míticas, biografias e muito mais na nossa biblioteca. Requisite o seu próximo livro de uma forma fácil e em poucos passos",
     "alwaysNews": "Sempre com novidades",
@@ -7,6 +8,10 @@
     "newsLetter": "Inscreva-se na nossa newsletter",
     "receiveNews": "Receba notícias e as novidades que o espera.",
     "modalHome": "Irá receber as nossas novidades no seu email.",
-    "titleModalHome": "Inscrição feita"
+    "titleModalHome": "Inscrição feita",
+    "button": {
+      "orderbook": "Requisite já um livro"
+    }
+    }
   }
 }
