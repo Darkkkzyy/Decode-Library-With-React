@@ -30,7 +30,7 @@ const Login = () => {
           </div>
         </div>
         {/* login2Right */}
-        <div className="!ml-0  flex  h-[85%] w-[50%] flex-col  items-center justify-center md:ml-[250px] lg:w-[30%]">
+        <div className="mr-0 sm:mr-24 !ml-0  flex  h-[85%] w-[50%] flex-col  items-center justify-center md:ml-[250px] lg:w-[30%]">
           <div className="self-center sm:self-start">
             <h2 className="text-4xl mr-6 text-white">Login</h2>
           </div>

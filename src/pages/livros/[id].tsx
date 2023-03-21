@@ -6,6 +6,7 @@ import Modal from "~/components/Modal";
 import Navbar from "~/components/navbar";
 import type { Books } from "~/models/books";
 import { BooksMocks } from "../../mocks/books";
+import Breadcrumbs from '../../components/breadcrumbs';
 
 const Details = () => {
   const router = useRouter();
@@ -21,6 +22,7 @@ const Details = () => {
     setIsModalOpen(false);
   };
 
+
   return (
     <>
       <Navbar />
@@ -30,6 +32,7 @@ const Details = () => {
             Details Page
           </h1>
         </div>
+
         {book.map((book) => (
           <div
             key={book.id}

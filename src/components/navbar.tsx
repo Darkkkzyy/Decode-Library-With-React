@@ -4,7 +4,7 @@ import Button from "./button";
 import Logo from "../../public/Logo.png";
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-
+import LanguageSwitcher from "~/components/LanguageSwitcher";
 
 const Navbar = () => {
   const Links = [
@@ -15,6 +15,7 @@ const Navbar = () => {
   ];
 
   const [open, setOpen] = useState(false);
+  const languages = ["en", "pt", "fr"];
 
   return (
     <div className="fixed top-0 left-0 w-full shadow-md">
@@ -24,11 +25,12 @@ const Navbar = () => {
       text-gray-800"
         >
           <Link href={"/"}>
-          <Image
-            src={Logo}
-            alt={"Decode Logo"}
-            className="h-[33px] w-[65px]"
-          ></Image></Link>
+            <Image
+              src={Logo}
+              alt={"Decode Logo"}
+              className="h-[33px] w-[65px]"
+            ></Image>
+          </Link>
         </div>
 
         <div
@@ -39,10 +41,8 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`absolute left-0 z-[-1] w-full bg-[#252525] pb-12  pl-9 transition-all dur ation-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:bg-[#252525] md:pb-0 md:pl-0 
-          ${
-            open ? "top-20 " : "top-[-490px]"
-          }`}
+          className={`dur ation-500 absolute left-0 z-[-1] w-full  bg-[#252525] pb-12 pl-9 transition-all ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:bg-[#252525] md:pb-0 md:pl-0 
+          ${open ? "top-2 " : "top-[-490px]"}`}
         >
           {Links.map((link) => (
             <li key={link.name} className="my-7 mr-2 text-xl md:my-0 md:ml-8">
@@ -54,11 +54,14 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className="md:ml-10">
+          <li className="md:mx-10">
             {" "}
             <Button visibility tranparent>
               <Link href="login">Login</Link>
             </Button>
+          </li>
+          <li>
+            <LanguageSwitcher languages={languages} />
           </li>
         </ul>
       </div>
