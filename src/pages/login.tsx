@@ -7,15 +7,6 @@ import Image from "next/image";
 import Navbar from "~/components/navbar";
 
 const Login = () => {
-  const handlechange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("digitando", event.target.value, event.target.name);
-  };
-
-  const handleSubmit =  () => {
-    alert('login')
-  };
-
-
   return (
     <>
       <Navbar />
@@ -43,24 +34,12 @@ const Login = () => {
           <div className="self-center sm:self-start">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
-          <form>
-            <Input
-              label="Digite o seu email"
-              name="email"
-              type="email"
-              onChange={handlechange}
-            />
-            <Input
-              label="Digite sua Senha"
-              name="password"
-              type="password"
-              onChange={handlechange}
-            />
+          {/* FORM */}
+          <form className="flex flex-col items-center justify-center">
+            <Input label="Digite o seu email" name="email" tipo="email" />
+            <Input label="Digite sua Senha" name="password" tipo="password" />
             <CheckButton />
-            <Button width visibility 
-            type='submit'
-            onClick={handleSubmit}
-            >
+            <Button width visibility>
               Login
             </Button>
           </form>

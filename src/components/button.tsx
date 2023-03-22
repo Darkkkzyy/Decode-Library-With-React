@@ -1,4 +1,3 @@
-import { type } from "os";
 import type { ReactNode } from "react";
 
 interface Props {
@@ -8,10 +7,9 @@ interface Props {
   visibility?:boolean;
   bgColor?:boolean;
   onClick?: () => void;
-  type?:string;
 }
 
-const Button = ({ children, tranparent,width,visibility,bgColor,onClick,type}: Props) => {
+const Button = ({ children, tranparent,width,visibility,bgColor,onClick}: Props) => {
    return (//justify-center
 
 <>

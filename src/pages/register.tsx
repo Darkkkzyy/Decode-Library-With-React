@@ -33,38 +33,49 @@ const Login = () => {
           </div>
         </div>
         {/* login2Right */}
-        <div className="mr-0 sm:mr-24 !ml-0 flex  h-[85%] w-[50%] flex-col  items-center justify-center md:ml-[250px] lg:w-[30%]">
+        <div className="mr-0 !ml-0 flex h-[85%]  w-[50%] flex-col items-center  justify-center sm:mr-24 md:ml-[250px] lg:w-[30%]">
           <div className="self-center sm:self-start">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
-          <form action="">
-
-    
-          <Input label="teste" />
-          <Input label="teste" />
-          <CheckButton />
-          <Button width visibility>
-            <Link href="login">Register</Link>
-          </Button>
-          <div className="m-5 flex gap-4">
-            <Button bgColor={true} visibility>
-              <span style={{ color: "black" }} className="flex  justify-center">
-                <FaFacebookF />
-              </span>
+          <form className="flex flex-col items-center justify-center">
+          <Input
+              label="Registre o seu email"
+              name="email"
+              tipo="email"
+            />
+            <Input
+              label="Registre a sua Senha"
+              name="password"
+              tipo="password"
+            />
+            <CheckButton />
+            <Button width visibility>
+              <Link href="login">Register</Link>
             </Button>
-            <Button bgColor={true} visibility>
-              <span className="flex justify-center">
-                <FcGoogle />
-              </span>
-            </Button>
-            <Button bgColor={true} visibility>
-              <span style={{ color: "black" }} className="flex  justify-center">
-                <BsApple />
-              </span>
-            </Button>
-          </div>
+            <div className="m-5 flex justify-center gap-4">
+              <Button bgColor={true} visibility>
+                <span
+                  style={{ color: "black" }}
+                  className="flex  justify-center"
+                >
+                  <FaFacebookF />
+                </span>
+              </Button>
+              <Button bgColor={true} visibility>
+                <span className="flex justify-center">
+                  <FcGoogle />
+                </span>
+              </Button>
+              <Button bgColor={true} visibility>
+                <span
+                  style={{ color: "black" }}
+                  className="flex  justify-center"
+                >
+                  <BsApple />
+                </span>
+              </Button>
+            </div>
           </form>
-
           <hr className="mb-5 w-[60%]" />
           <Button width tranparent visibility>
             <Link href={"login"}>Já tem conta? Faça Login</Link>
