@@ -1,3 +1,4 @@
+import { type } from "os";
 import type { ReactNode } from "react";
 
 interface Props {
@@ -7,14 +8,15 @@ interface Props {
   visibility?:boolean;
   bgColor?:boolean;
   onClick?: () => void;
+  type?:string;
 }
 
-const Button = ({ children, tranparent,width,visibility,bgColor,onClick}: Props) => {
+const Button = ({ children, tranparent,width,visibility,bgColor,onClick,type}: Props) => {
    return (//justify-center
 
 <>
     <div className="flex items-center ">  
-      <button onClick={onClick}
+      <button onClick={onClick} 
         className={`h-[43px] w-[360px] rounded-full ${tranparent  ? "border border-white bg-transparent" : "bg-[#FF4E16]  hover:bg-orange-700" } py-2 px-4 font-bold text-white
         ${
           width

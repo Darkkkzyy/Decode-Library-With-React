@@ -37,6 +37,9 @@ const Login = () => {
           <div className="self-center sm:self-start">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
+          <form action="">
+
+    
           <Input label="teste" />
           <Input label="teste" />
           <CheckButton />
@@ -60,6 +63,7 @@ const Login = () => {
               </span>
             </Button>
           </div>
+          </form>
 
           <hr className="mb-5 w-[60%]" />
           <Button width tranparent visibility>

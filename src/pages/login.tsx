@@ -7,12 +7,21 @@ import Image from "next/image";
 import Navbar from "~/components/navbar";
 
 const Login = () => {
+  const handlechange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("digitando", event.target.value, event.target.name);
+  };
+
+  const handleSubmit =  () => {
+    alert('login')
+  };
+
+
   return (
     <>
       <Navbar />
-{/* CONTAINER MAIN */}
+      {/* CONTAINER MAIN */}
       <div className=" flex h-screen w-full  items-center justify-center gap-[100px]">
-      {/* login1Left */}
+        {/* login1Left */}
         <div className="hidden h-[85%] w-[50%] flex-col  items-center justify-center lg:flex ">
           <div className=" mb-10 flex w-[75%] justify-center ">
             <h1 className="self-start text-5xl uppercase  text-white ">
@@ -30,19 +39,35 @@ const Login = () => {
           </div>
         </div>
         {/* login2Right */}
-        <div className="mr-0 sm:mr-24 !ml-0  flex  h-[85%] w-[50%] flex-col  items-center justify-center md:ml-[250px] lg:w-[30%]">
+        <div className="mr-0 !ml-0 flex  h-[85%]  w-[50%] flex-col items-center  justify-center sm:mr-24 md:ml-[250px] lg:w-[30%]">
           <div className="self-center sm:self-start">
-            <h2 className="text-4xl mr-6 text-white">Login</h2>
+            <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
-          <Input label="teste" />
-          <Input label="teste" />
-          <CheckButton />
-          <Button width visibility>
-            <Link href="login">Login</Link>
-          </Button>
+          <form>
+            <Input
+              label="Digite o seu email"
+              name="email"
+              type="email"
+              onChange={handlechange}
+            />
+            <Input
+              label="Digite sua Senha"
+              name="password"
+              type="password"
+              onChange={handlechange}
+            />
+            <CheckButton />
+            <Button width visibility 
+            type='submit'
+            onClick={handleSubmit}
+            >
+              Login
+            </Button>
+          </form>
+
           <hr className="m-5 w-[60%]" />
           <Button width tranparent visibility>
-            <Link href={"register"}>Não tem Conta? Registe-se aqui</Link>  
+            <Link href={"register"}>Não tem Conta? Registe-se aqui</Link>
           </Button>
         </div>
       </div>
