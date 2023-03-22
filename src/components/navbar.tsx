@@ -57,7 +57,7 @@ const Navbar = () => {
           <li className="md:mx-10">
             {" "}
             <Button visibility tranparent>
-              <Link href="login">Login</Link>
+              <Link href="/login">Login</Link>
             </Button>
           </li>
           <li>

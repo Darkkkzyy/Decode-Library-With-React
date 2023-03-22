@@ -28,6 +28,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs"
-  ],
+, "src/pages/api/user/cadastro.js", "services/user.ts"  ],
   "exclude": ["node_modules"]
 }

@@ -3,8 +3,8 @@ import { FaSearch } from "react-icons/fa";
 interface Props {
   label: string;
   showIcon?: boolean;
-  name:string;
-  tipo:string;
+  name?:string;
+  tipo?:string;
 }
 
 const Input = ({ label, showIcon,name,tipo }: Props) => {

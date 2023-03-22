@@ -100,7 +100,7 @@ export const Home = () => {
           <h1 className="ml-5">{t("newsLetter")}</h1>
           <p className="ml-5">{t("receiveNews")}</p>
           <div className="sm:flex-row ml-0 flex flex-col items-center  justify-center">
-            <Input label="Digite seu email..." />
+            <Input  label="Digite seu email..." />
             {/* Modal */}
             <Button onClick={handleModalOpen} visibility width>
               {" "}
