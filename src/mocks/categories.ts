@@ -16,4 +16,21 @@ export const CategoriesMocks = [
     id: "4",
     categories: "História"
   },
+  {
+    id: "5",
+    categories: "Programação"
+    
+  },
+  {
+    id: "6",
+    categories: "Ficção"
+  },
+  {
+    id: "7",
+    categories: "Terror"
+  },
+  {
+    id: "8",
+    categories: "Suspense"
+  }
 ];
