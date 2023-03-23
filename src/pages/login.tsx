@@ -39,9 +39,11 @@ const Login = () => {
             <Input label="Digite o seu email" name="email" tipo="email" />
             <Input label="Digite sua Senha" name="password" tipo="password" />
             <CheckButton />
-            <Button width visibility>
+            <input type="submit"  className="h-[43px] w-[360px] rounded-full  bg-[#FF4E16] m-5 hover:bg-orange-700 py-2 px-4 font-bold text-white"/>
+
+            {/* <Button width visibility>
               Login
-            </Button>
+            </Button> */}
           </form>
 
           <hr className="m-5 w-[60%]" />

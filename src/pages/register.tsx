@@ -38,20 +38,18 @@ const Login = () => {
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
           <form className="flex flex-col items-center justify-center">
-          <Input
-              label="Registre o seu email"
-              name="email"
-              tipo="email"
-            />
+            <Input label="Registre o seu email" name="email" tipo="email" />
             <Input
               label="Registre a sua Senha"
               name="password"
               tipo="password"
             />
             <CheckButton />
-            <Button width visibility>
-              <Link href="login">Register</Link>
-            </Button>
+            <input
+              type="submit"
+              className="m-5 h-[43px] w-[360px]  rounded-full bg-[#FF4E16] py-2 px-4 font-bold text-white hover:bg-orange-700"
+            />
+
             <div className="m-5 flex justify-center gap-4">
               <Button bgColor={true} visibility>
                 <span

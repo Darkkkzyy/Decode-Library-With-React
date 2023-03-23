@@ -28,7 +28,7 @@ export const Home = () => {
       {" "}
       <Navbar />
       {/* HomeFirstContainer */}
-      <div className="flex h-screen w-full  items-center justify-center  ">
+      <div className="flex mt-14 w-full  items-center justify-center  ">
         {/* Home First */}
         <div className="flex max-w-7xl gap-10">
           {/* Container Left */}
@@ -100,7 +100,7 @@ export const Home = () => {
           <h1 className="ml-5">{t("newsLetter")}</h1>
           <p className="ml-5">{t("receiveNews")}</p>
           <div className="sm:flex-row ml-0 flex flex-col items-center  justify-center">
-            <Input  label="Digite seu email..." />
+            <Input   label="Digite seu email..." />
             {/* Modal */}
             <Button onClick={handleModalOpen} visibility width>
               {" "}

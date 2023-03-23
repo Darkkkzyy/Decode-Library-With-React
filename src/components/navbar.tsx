@@ -60,7 +60,7 @@ const Navbar = () => {
               <Link href="/login">Login</Link>
             </Button>
           </li>
-          <li>
+          <li className="flex m-5 items-center">
             <LanguageSwitcher languages={languages} />
           </li>
         </ul>
