@@ -8,8 +8,33 @@ import Navbar from "~/components/navbar";
 import { FaFacebookF } from "react-icons/fa";
 import { BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import Validation from "./signupValidation";
 
 const Login = () => {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState<{
+    email?: string;
+    password?: string;
+    name?: string;
+  }>({});
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setErrors(Validation(values));
+  };
   return (
     <>
       <Navbar />
@@ -37,13 +62,35 @@ const Login = () => {
           <div className="self-center sm:self-start">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
-          <form className="flex flex-col items-center justify-center">
-            <Input label="Registre o seu email" name="email" tipo="email" />
+          <form
+            className="flex flex-col items-center justify-center"
+            onSubmit={handleSubmit}
+          >
+            <Input label="Registre o seu nome" name="name" tipo="name" />
+            {errors.name && <span className="text-red-800">{errors.name}</span>}
+
             <Input
+              label="Registre o seu email"
+              name="email"
+              tipo="email"
+              onChange={handleInput}
+            />
+            <span>
+              {errors.email && (
+                <span className="text-red-800">{errors.email}</span>
+              )}
+            </span>
+            <Input
+              onChange={handleInput}
               label="Registre a sua Senha"
               name="password"
               tipo="password"
             />
+            <span>
+              {errors.password && (
+                <span className="text-red-800">{errors.password}</span>
+              )}
+            </span>
             <CheckButton />
             <input
               type="submit"
@@ -52,11 +99,8 @@ const Login = () => {
 
             <div className="m-5 flex justify-center gap-4">
               <Button bgColor={true} visibility>
-                <span
-                  style={{ color: "black" }}
-                  className="flex  justify-center"
-                >
-                  <FaFacebookF />
+                <span className="flex  justify-center">
+                  <FaFacebookF className="text-black" />
                 </span>
               </Button>
               <Button bgColor={true} visibility>
@@ -65,11 +109,8 @@ const Login = () => {
                 </span>
               </Button>
               <Button bgColor={true} visibility>
-                <span
-                  style={{ color: "black" }}
-                  className="flex  justify-center"
-                >
-                  <BsApple />
+                <span className="flex  justify-center">
+                  <BsApple className="text-black" />
                 </span>
               </Button>
             </div>

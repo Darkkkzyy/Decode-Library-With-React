@@ -13,29 +13,22 @@ import { BsPlusSquare } from "react-icons/bs";
 export const Livros = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
   return (
     <>
       <Navbar />
       container principal
       <div className="flex h-screen w-full flex-col items-center ">
         <div className="flex w-[80%] flex-col items-center justify-center">
-          <h1 className="mt-16 p-10 self-center whitespace-nowrap text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
+          <h1 className="mt-16 self-center whitespace-nowrap p-10 text-3xl text-white sm:mt-[50px] sm:self-start sm:text-6xl">
             A nossa biblioteca
           </h1>
           <div className="border-none">
-            <Input  label="Pesquise um Livro"/>
+            <Input label="Pesquise um Livro" />
           </div>
         </div>
 
         {/* on click abr o modal */}
-        <Button onClick={handleModalOpen} width tranparent>
+        <Button onClick={() => setIsModalOpen(true)} width tranparent>
           <div>
             <span className="flex items-center justify-center gap-5">
               <BsPlusSquare />
@@ -45,7 +38,7 @@ export const Livros = () => {
               text={"Adicionar"}
               title="Adicionar um Livro"
               isOpen={isModalOpen}
-              onClose={handleModalClose}
+              onClose={() => setIsModalOpen(false)}
             >
               <div className="flex flex-col items-center justify-center">
                 <Input label="Titulo do Livro" />
@@ -60,17 +53,18 @@ export const Livros = () => {
         <div className="flex flex-row flex-wrap items-center justify-center ">
           <div className="hidden h-[432px] flex-col md:mr-[24px] md:flex ">
             <button
-              onClick={handleModalOpen}
+              onClick={() => setIsModalOpen(false)}
               className=" flex  h-[381px] w-[261px] items-center justify-center border"
             >
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>
-            <Modal rounded
+            <Modal
+              rounded
               text={"Adcionar"}
               title="Adicionar um Livro"
               isOpen={isModalOpen}
-              onClose={handleModalClose}
+              onClose={() => setIsModalOpen(false)}
             >
               <div className="flex flex-col items-center justify-center">
                 <Input label="Titulo do Livro" />

@@ -27,7 +27,10 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
-, "src/pages/api/user/cadastro.js", "services/user.ts"  ],
+    "**/*.mjs",
+    "src/pages/api/user/cadastro.js",
+    "services/user.ts",
+    "src/pages/loginvalidation.js"
+  ],
   "exclude": ["node_modules"]
 }

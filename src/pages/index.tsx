@@ -9,6 +9,7 @@ import { useState } from "react";
 import Input from "~/components/input";
 import footerImage from "../../public/Footer.png";
 import { useTranslation } from "react-i18next";
+import Head from "next/head";
 
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,10 +26,12 @@ export const Home = () => {
 
   return (
     <>
-      {" "}
+      <Head>
+        <title>teste</title>
+      </Head>{" "}
       <Navbar />
       {/* HomeFirstContainer */}
-      <div className="flex mt-14 w-full  items-center justify-center  ">
+      <div className="mt-14 flex w-full  items-center justify-center  ">
         {/* Home First */}
         <div className="flex max-w-7xl gap-10">
           {/* Container Left */}
@@ -45,7 +48,7 @@ export const Home = () => {
             </div>
           </div>
           {/* Container Right */}
-          <div className=" m-3 hidden items-center justify-center lg:flex ml-10">
+          <div className=" m-3 ml-10 hidden items-center justify-center lg:flex">
             <Image
               className=" h-full w-[1400px]"
               src={frontImage}
@@ -60,9 +63,7 @@ export const Home = () => {
         <div className=" flex max-w-7xl flex-col ">
           {/* Home Title*/}
           <div className=" m-6 flex  flex-col  ">
-            <h1 className="mb-10 text-[60px] text-black">
-              {t("alwaysNews")}
-            </h1>
+            <h1 className="mb-10 text-[60px] text-black">{t("alwaysNews")}</h1>
             <p className=" mb-10 block text-[20px] text-black">
               {t("seeNewBooks")}
             </p>
@@ -99,8 +100,8 @@ export const Home = () => {
         <div className="">
           <h1 className="ml-5">{t("newsLetter")}</h1>
           <p className="ml-5">{t("receiveNews")}</p>
-          <div className="sm:flex-row ml-0 flex flex-col items-center  justify-center">
-            <Input   label="Digite seu email..." />
+          <div className="ml-0 flex flex-col items-center justify-center  sm:flex-row">
+            <Input label="Digite seu email..." />
             {/* Modal */}
             <Button onClick={handleModalOpen} visibility width>
               {" "}
@@ -114,9 +115,7 @@ export const Home = () => {
               onClose={handleModalClose}
             >
               <div className="flex flex-col items-center justify-center">
-                <p className="mt-5 text-sm text-white">
-                  {t("modalHome")}
-                </p>
+                <p className="mt-5 text-sm text-white">{t("modalHome")}</p>
               </div>
             </Modal>
           </div>

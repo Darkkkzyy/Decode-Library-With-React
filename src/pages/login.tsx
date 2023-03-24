@@ -5,11 +5,37 @@ import frontImage from "../../public/frontImg.png";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "~/components/navbar";
+import { useState } from "react";
+import Validation from "./loginvalidation";
+import Head from "next/head";
 
 const Login = () => {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>(
+    {}
+  );
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setErrors(Validation(values));
+  };
   return (
     <>
       <Navbar />
+      <Head>
+        <title>Login</title>
+      </Head>
       {/* CONTAINER MAIN */}
       <div className=" flex h-screen w-full  items-center justify-center gap-[100px]">
         {/* login1Left */}
@@ -35,11 +61,39 @@ const Login = () => {
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
           {/* FORM */}
-          <form className="flex flex-col items-center justify-center">
-            <Input label="Digite o seu email" name="email" tipo="email" />
-            <Input label="Digite sua Senha" name="password" tipo="password" />
+          <form
+            className="flex flex-col items-center justify-center"
+            onSubmit={handleSubmit}
+          >
+            <Input
+              label="Digite o seu email"
+              onChange={handleInput}
+              name="email"
+              tipo="email"
+            />
+            <span>
+              {errors.email && (
+                <span className="text-red-800">{errors.email}</span>
+              )}
+            </span>
+
+            <Input
+              label="Digite sua Senha"
+              onChange={handleInput}
+              name="password"
+              tipo="password"
+            />
+            <span>
+              {errors.password && (
+                <span className="text-red-800">{errors.password}</span>
+              )}
+            </span>
+
             <CheckButton />
-            <input type="submit"  className="h-[43px] w-[360px] rounded-full  bg-[#FF4E16] m-5 hover:bg-orange-700 py-2 px-4 font-bold text-white"/>
+            <input
+              type="submit"
+              className="m-5 h-[43px] w-[360px]  rounded-full bg-[#FF4E16] py-2 px-4 font-bold text-white hover:bg-orange-700"
+            />
 
             {/* <Button width visibility>
               Login

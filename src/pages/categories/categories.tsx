@@ -2,6 +2,7 @@ import Button from "~/components/button";
 import Navbar from "~/components/navbar";
 import { CategoriesMocks } from "../../mocks/categories";
 import Link from "next/link";
+import Dropdown from "~/components/dropdown";
 
 
 
@@ -21,6 +22,8 @@ const Categories = () => {
         </div>
         {/* Buttons */}
         <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center lg:hidden">  <Dropdown/></div>
+        
           <div className="hidden flex-row flex-wrap items-center justify-center gap-6 lg:flex w-full md:w-[80%]">
           {CategoriesMocks.map((categorie) => (
             <div className="  " key={categorie.id}>

@@ -3,15 +3,19 @@ import { FaSearch } from "react-icons/fa";
 interface Props {
   label: string;
   showIcon?: boolean;
-  name?:string;
-  tipo?:string;
+  name?: string;
+  tipo?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ label, showIcon,name,tipo }: Props) => {
+const Input = ({ label, showIcon, name, tipo, onChange }: Props) => {
   return (
     <>
       <div className="flex items-center justify-center">
-        <input name={name} type={tipo} 
+        <input
+          name={name}
+          type={tipo}
+          onChange={onChange}
           className="m-[10px] h-[46px] w-[360px] rounded-[100px] border-2 p-5 "
           placeholder={label}
         />
