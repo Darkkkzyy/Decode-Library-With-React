@@ -1,9 +1,9 @@
 export const BooksMocks = [
   {
     id: "1",
-    autor: "teste",
-    title: "war & peace",
-    href: "/livros/war-peace",
+    autor: "Kazuo Ishiguro",
+    title: "O Gigante Enterrado",
+    href: "/livros/livro-o-gigante-enterrado-capa.webp",
     price:32,
     image: "",
     descricao: "",
@@ -21,20 +21,20 @@ export const BooksMocks = [
   },
   {
     id: "3",
-    autor: "teste2",
-    title: "teste",
+    autor: "Mary Shelley",
+    title: "Frankenstein, ou o Prometeu moderno",
     price:123,
-    href: "/livros/war-peace",
+    href: "/livros/livros-frankestein-capa-jpg",
     image: "",
     descricao: "",
     editora:""
   },
   {
     id: "4",
-    autor: "teste3",
+    autor: "Fiódor Dostoiévski",
     price:232,
-    title: "testando",
-    href: "/livros/war-peace",
+    title: "O jogador",
+    href: "/livros/livro-o-jogador-capa-png",
     image: "",
     descricao: "",
     editora:""
