@@ -105,7 +105,7 @@ export const Home = () => {
             {/* Modal */}
             <Button onClick={handleModalOpen} visibility width>
               {" "}
-              <Link href={"/"}>{t("register")}</Link>
+              <Link href={"/"}>{t("Register")}</Link>
             </Button>
             <Modal
               rounded

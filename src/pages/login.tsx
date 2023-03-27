@@ -57,7 +57,7 @@ const Login = () => {
         </div>
         {/* login2Right */}
         <div className="mr-0 !ml-0 flex  h-[85%]  w-[50%] flex-col items-center  justify-center sm:mr-24 md:ml-[250px] lg:w-[30%]">
-          <div className="self-center sm:self-start">
+          <div className="self-center mb-5">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
           {/* FORM */}

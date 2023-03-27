@@ -10,6 +10,8 @@ import { BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import Validation from "./signupValidation";
+import axios from "axios";
+import { useNavigate } from "react-router";
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -34,6 +36,14 @@ const Login = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrors(Validation(values));
+    if (errors.name === "" && errors.email === "" && errors.password === "") {
+      axios
+        .post("http://localhost:8081/signup", values)
+        .then((res) => {
+          console.log("teste")
+        } )
+        .catch((error) => console.log(error));
+    }
   };
   return (
     <>
@@ -59,7 +69,7 @@ const Login = () => {
         </div>
         {/* login2Right */}
         <div className="mr-0 !ml-0 flex h-[85%]  w-[50%] flex-col items-center  justify-center sm:mr-24 md:ml-[250px] lg:w-[30%]">
-          <div className="self-center sm:self-start">
+          <div className="mb-5 self-center">
             <h2 className="mr-6 text-4xl text-white">Login</h2>
           </div>
           <form
