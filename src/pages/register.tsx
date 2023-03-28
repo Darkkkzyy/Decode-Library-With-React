@@ -11,7 +11,6 @@ import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import Validation from "./signupValidation";
 import axios from "axios";
-import { useNavigate } from "react-router";
 
 const Login = () => {
   const [values, setValues] = useState({
