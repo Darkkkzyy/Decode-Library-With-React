@@ -8,9 +8,7 @@ import Navbar from "~/components/navbar";
 import { FaFacebookF } from "react-icons/fa";
 import { BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
-import Validation from "./signupValidation";
-import axios from "axios";
+
 
 
 const Login = () => {
@@ -42,6 +40,7 @@ const Login = () => {
         .catch((error) => console.log(error));
     }
   };
+
   return (
     <>
       <Navbar />
@@ -71,33 +70,21 @@ const Login = () => {
           </div>
           <form
             className="flex flex-col items-center justify-center"
-            onSubmit={handleSubmit}
           >
             <Input label="Registre o seu nome" name="name" tipo="name" />
-            {errors.name && <span className="text-red-800">{errors.name}</span>}
 
             <Input
               label="Registre o seu email"
               name="email"
               tipo="email"
-              onChange={handleInput}
             />
-            <span>
-              {errors.email && (
-                <span className="text-red-800">{errors.email}</span>
-              )}
-            </span>
+            
             <Input
-              onChange={handleInput}
               label="Registre a sua Senha"
               name="password"
               tipo="password"
             />
-            <span>
-              {errors.password && (
-                <span className="text-red-800">{errors.password}</span>
-              )}
-            </span>
+           
             <CheckButton />
             <input
               type="submit"
