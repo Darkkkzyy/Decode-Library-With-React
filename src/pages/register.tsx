@@ -12,6 +12,7 @@ import { useState } from "react";
 import Validation from "./signupValidation";
 import axios from "axios";
 
+
 const Login = () => {
   const [values, setValues] = useState({
     name: "",
@@ -38,9 +39,6 @@ const Login = () => {
     if (errors.name === "" && errors.email === "" && errors.password === "") {
       axios
         .post("http://localhost:8081/signup", values)
-        .then((res) => {
-          console.log("teste")
-        } )
         .catch((error) => console.log(error));
     }
   };
