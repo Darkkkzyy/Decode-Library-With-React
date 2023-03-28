@@ -8,7 +8,6 @@ import Navbar from "~/components/navbar";
 import Head from "next/head";
 
 const Login = () => {
-
 return (
     <>
       <Navbar />

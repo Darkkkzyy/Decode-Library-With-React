@@ -12,35 +12,6 @@ import { FcGoogle } from "react-icons/fc";
 
 
 const Login = () => {
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  const [errors, setErrors] = useState<{
-    email?: string;
-    password?: string;
-    name?: string;
-  }>({});
-
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrors(Validation(values));
-    if (errors.name === "" && errors.email === "" && errors.password === "") {
-      axios
-        .post("http://localhost:8081/signup", values)
-        .catch((error) => console.log(error));
-    }
-  };
-
   return (
     <>
       <Navbar />
