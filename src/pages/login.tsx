@@ -5,32 +5,11 @@ import frontImage from "../../public/frontImg.png";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "~/components/navbar";
-import { useState } from "react";
-import Validation from "./loginvalidation";
 import Head from "next/head";
 
 const Login = () => {
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
 
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>(
-    {}
-  );
-
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrors(Validation(values));
-  };
-  return (
+return (
     <>
       <Navbar />
       <Head>
@@ -63,31 +42,20 @@ const Login = () => {
           {/* FORM */}
           <form
             className="flex flex-col items-center justify-center"
-            onSubmit={handleSubmit}
           >
             <Input
               label="Digite o seu email"
-              onChange={handleInput}
               name="email"
               tipo="email"
             />
-            <span>
-              {errors.email && (
-                <span className="text-red-800">{errors.email}</span>
-              )}
-            </span>
+         
 
             <Input
               label="Digite sua Senha"
-              onChange={handleInput}
               name="password"
               tipo="password"
             />
-            <span>
-              {errors.password && (
-                <span className="text-red-800">{errors.password}</span>
-              )}
-            </span>
+          
 
             <CheckButton />
             <input
