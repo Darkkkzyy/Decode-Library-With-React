@@ -3,7 +3,7 @@ export const BooksMocks = [
     id: "1",
     autor: "Kazuo Ishiguro",
     title: "O Gigante Enterrado",
-    href: "/livros/livro-o-gigante-enterrado-capa.webp",
+    href: "/livros/livro-o-gigante-enterrado-capa",
     price:32,
     image: "",
     descricao: "",
@@ -24,7 +24,7 @@ export const BooksMocks = [
     autor: "Mary Shelley",
     title: "Frankenstein, ou o Prometeu moderno",
     price:123,
-    href: "/livros/livros-frankestein-capa-jpg",
+    href: "/livros/livros-frankestein-capa",
     image: "",
     descricao: "",
     editora:""
@@ -34,7 +34,7 @@ export const BooksMocks = [
     autor: "Fiódor Dostoiévski",
     price:232,
     title: "O jogador",
-    href: "/livros/livro-o-jogador-capa-png",
+    href: "/livros/livro-o-jogador-capa",
     image: "",
     descricao: "",
     editora:""
