@@ -1,9 +1,20 @@
+export interface Books  {
+  id: string;
+  autor: string;
+  price:number;
+  title: string;
+  href: string;
+  image: string;
+  descricao: string;
+  editora:string;
+}
+
 export const BooksMocks = [
   {
     id: "1",
     autor: "Kazuo Ishiguro",
     title: "O Gigante Enterrado",
-    href: "/livros/image1",
+    href: "/livros/Livro-4",
     price:32,
     image: "",
     descricao: "",

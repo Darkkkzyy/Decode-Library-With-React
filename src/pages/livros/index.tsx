@@ -56,6 +56,7 @@ export const Livros = () => {
               onClick={() => setIsModalOpen(false)}
               className=" flex  h-[381px] w-[261px] items-center justify-center border"
             >
+              
               <Image src={plusimg} className="w-[38px]" alt="plus icon"></Image>
             </button>
             <p className="addBook mt-3">Adicionar um livro</p>

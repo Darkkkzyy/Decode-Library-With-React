@@ -1,3 +1,8 @@
+export interface Books  {
+  id: string;
+  categories: string;
+}
+
 export const CategoriesMocks = [
   {
     id: "1",
