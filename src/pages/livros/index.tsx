@@ -10,9 +10,19 @@ import Modal from "~/components/Modal";
 import { useState } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 
-export const Livros = () => {
+
+
+  /*Este trecho de código define um componente funcional em React chamado Livros. Ele utiliza o hook 
+    useState para definir uma variável de estado isModalOpen e sua função de alteração correspondente setIsModalOpen, 
+    ambos inicializados como false. Essa variável de estado controla a visibilidade do componente de modal. */
+  export const Livros = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  
+
+  /*Este bloco de código retorna os elementos JSX a serem renderizados. Ele inclui o componente Navbar, um container div 
+  com estilo flexbox e um título (h1) com o texto "A nossa biblioteca". Também renderiza um componente Input com o rótulo 
+  "Pesquise um Livro". */
   return (
     <>
       <Navbar />
@@ -27,7 +37,9 @@ export const Livros = () => {
           </div>
         </div>
 
-        {/* on click abr o modal */}
+        {/* Esta seção renderiza um componente Button que dispara a abertura de um modal quando clicado. O botão exibe o texto "Adicionar Livro" 
+        juntamente com um ícone (BsPlusSquare) e contém um componente Modal. O componente Modal é renderizado condicionalmente 
+        com base no valor de isModalOpen. Ele inclui vários componentes Input para capturar informações sobre um livro.*/}
         <Button onClick={() => setIsModalOpen(true)} width tranparent>
           <div>
             <span className="flex items-center justify-center gap-5">
