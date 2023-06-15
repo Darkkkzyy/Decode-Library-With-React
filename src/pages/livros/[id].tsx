@@ -27,19 +27,21 @@ const Details = () => {
     <>
       <Navbar />
       
-      <div className="flex h-[100vh] w-[100vw] flex-col items-center justify-center gap-0 md:gap-5">
-        <div className="flex items-center justify-center">
+      <div className="flex h-[100vh] w-[100vw] flex-col items-center justify-center gap-0 my-12 md:gap-5">
+        <div className="flex items-center justify-center ">
           {/* Título da página */}
 
           {book.map((book) => (
           <div
             key={book.id}
-            className="flex flex-col items-center justify-center md:flex-row ">
+            className="flex flex-col items-center justify-center md:flex-row  ">
             
-            <h1 className=" self-start whitespace-nowrap p-5 text-2xl text-white md:self-center md:text-3xl ">
+            <h1 className=" self-start whitespace-nowrap p-5 text-2xl text-white md:self-center md:text-3xl  ">
               A nossa Bibloteca - 
             </h1>      
-            <h1 className=" text-[20px]  md:text-[30px] text-[#FF4E16] " > {book.title} </h1>
+            <h1 className="text-[20px] md:text-[30px] text-[#FF4E16]">
+              <a href="/livros">{book.title}</a>
+            </h1>
           </div>
         ))}
 

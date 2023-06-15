@@ -11,8 +11,11 @@ import footerImage from "../../public/Footer.png";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
 
+
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -41,11 +44,13 @@ export const Home = () => {
               {t("welcomeToPage")}
             </h1>
             <p className=" mb-10 block text-[20px]">{t("discoverText")}</p>
-            <div className="justify-left flex">
-              <Button visibility width>
-                <Link href={"/livros"}>{t("button.orderbook")}</Link>
-              </Button>
-            </div>
+            <div className="flex justify-left">
+            <button className="visible w-full  ">
+              <Link href="/livros">
+                <span className=" bg-[#FF4E16]  hover:bg-orange-700 h-[43px] w-[360px] rounded-full py-2 px-4 font-bold text-white">{t("button.orderbook")}</span>
+              </Link>
+            </button>
+          </div>
           </div>
           {/* Container Right */}
           <div className=" m-3 ml-10 hidden items-center justify-center lg:flex">
