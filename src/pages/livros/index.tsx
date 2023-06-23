@@ -10,6 +10,7 @@ import Modal from "~/components/Modal";
 import { useState } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 
+  
 
 
   /*Este trecho de código define um componente funcional em React chamado Livros. Ele utiliza o hook 
@@ -17,7 +18,8 @@ import { BsPlusSquare } from "react-icons/bs";
     ambos inicializados como false. Essa variável de estado controla a visibilidade do componente de modal. */
   export const Livros = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
+  
   
 
   /*Este bloco de código retorna os elementos JSX a serem renderizados. Ele inclui o componente Navbar, um container div 
