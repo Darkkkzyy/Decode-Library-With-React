@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.13.6",
     "@types/i18next": "^13.0.0",
     "@types/react-i18next": "^8.1.0",
     "antd": "^5.2.3",

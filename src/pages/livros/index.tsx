@@ -11,6 +11,9 @@ import { useState } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 
   
+   
+
+
 
 
   /*Este trecho de código define um componente funcional em React chamado Livros. Ele utiliza o hook 
@@ -20,6 +23,19 @@ import { BsPlusSquare } from "react-icons/bs";
   const [isModalOpen, setIsModalOpen] = useState(false);
   
   
+  const getBooks = async () => {
+    try {
+      const response = await fetch('https://www.googleapis.com/books/v1/volumes?q=money&key=AIzaSyBqVY7j1KVVj9XLkdGSDi-cPmjYTL9oodQ');
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+      const data = await response.json();
+      console.log(data);
+      // Access the desired properties from the data object here
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   
 
   /*Este bloco de código retorna os elementos JSX a serem renderizados. Ele inclui o componente Navbar, um container div 
@@ -67,7 +83,7 @@ import { BsPlusSquare } from "react-icons/bs";
         <div className="flex flex-row flex-wrap items-center justify-center ">
           <div className="hidden h-[432px] flex-col md:mr-[24px] md:flex ">
             <button
-              onClick={() => setIsModalOpen(false)}
+              onClick={getBooks}
               className=" flex  h-[381px] w-[261px] items-center justify-center border"
             >
               
