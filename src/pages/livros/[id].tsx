@@ -1,10 +1,12 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import {useEffect} from "react";
 import Button from "~/components/button";
 import Card from "~/components/card";
 import Modal from "~/components/Modal";
 import Navbar from "~/components/navbar";
 import { BooksMocks } from "../../mocks/books";
+import axios from 'axios';
 
 
 const Details = () => {
@@ -21,7 +23,6 @@ const Details = () => {
     setIsModalOpen(false);
   };
 
-  
 
   return (
     <>
