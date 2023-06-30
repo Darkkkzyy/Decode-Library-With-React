@@ -97,7 +97,7 @@ import { BsPlusSquare } from "react-icons/bs";
               isOpen={isModalOpen}
               onClose={() => setIsModalOpen(false)}
             >
-              <div className="flex flex-col items-center justify-center">
+              <div  className="flex flex-col items-center justify-center">
                 <Input label="Titulo do Livro" />
                 <Input label="Autor" />
                 <Input label="Categoria" />
