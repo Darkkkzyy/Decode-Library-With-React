@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Button = ({ children, tranparent,width,visibility,bgColor,onClick}: Props) => {
-   return (//justify-center
+   return (
 
 <>
     <div className="flex items-center ">  
