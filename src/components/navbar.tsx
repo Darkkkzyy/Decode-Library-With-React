@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full shadow-md">
-      <div className="items-center justify-between bg-[#252525] py-4 px-7 md:flex md:px-10">
+      <div className="items-center justify-between bg-[#252525] px-7 md:flex md:px-10">
         <div
           className="flex cursor-pointer items-center font-[Poppins] text-2xl font-bold 
       text-gray-800"
